@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Our Story & Vision | DivinaECO Pack Greece</title>
+  <meta name="description" content="Discover the story behind DivinaECO Pack Greece — 35 years of manufacturing excellence, in-house production, and the vision of our founding partners.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #3a7d44;
+      --green-dark: #2c5f34;
+      --green-light: #5aaf6a;
+      --gold: #c9a84c;
+      --gold-light: #e0c272;
+      --dark: #1a1a1a;
+      --dark-green: #0c1a0f;
+      --mid: #4a4a4a;
+      --light: #f5f5f0;
+      --white: #ffffff;
+      --border: #e0ddd5;
+      --font-head: 'Playfair Display', serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--dark); background: var(--white); font-size: 15px; line-height: 1.65; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ─── NAVBAR ─── */
+    .navbar { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.07); }
+    .navbar-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 72px; }
+    .nav-left { display: flex; gap: 8px; align-items: center; }
+    .nav-logo { text-align: center; }
+    .nav-logo .logo-text { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--green-dark); letter-spacing: -0.5px; }
+    .nav-logo .logo-sub { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); display: block; margin-top: -2px; }
+    .nav-back { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--mid); font-weight: 500; display: flex; align-items: center; gap: 6px; transition: color .2s; }
+    .nav-back:hover { color: var(--green); }
+    .nav-back svg { width: 14px; height: 14px; }
+    .nav-right { display: flex; gap: 20px; align-items: center; justify-content: flex-end; }
+    .nav-item { font-size: 13px; font-weight: 500; letter-spacing: .4px; text-transform: uppercase; padding: 8px 4px; color: var(--dark); transition: color .2s; position: relative; }
+    .nav-item::after { content:''; position:absolute; bottom:0; left:50%; right:50%; height:2px; background:var(--green); transition:left .25s,right .25s; }
+    .nav-item:hover { color: var(--green); }
+    .nav-item:hover::after { left:0; right:0; }
+    .lang-toggle { display: flex; gap: 4px; align-items: center; }
+    .lang-btn { padding: 3px 9px; font-size: 11px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; border: 1.5px solid #ccc; border-radius: 3px; background: transparent; color: var(--mid); cursor: pointer; transition: all .2s; }
+    .lang-btn:hover { border-color: var(--green); color: var(--green); }
+    .lang-active { background: var(--green) !important; border-color: var(--green) !important; color: #fff !important; }
+
+    /* ─── HERO ─── */
+    .about-hero {
+      position: relative;
+      height: 560px;
+      overflow: hidden;
+      background: var(--dark-green);
+    }
+    .about-hero img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      filter: brightness(.45) saturate(0.8);
+    }
+    .about-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(10,30,14,.88) 0%,
+        rgba(10,30,14,.55) 50%,
+        rgba(44,95,52,.3) 100%
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 64px 64px 72px;
+    }
+    .hero-breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+      color: rgba(255,255,255,.4); margin-bottom: 20px;
+    }
+    .hero-breadcrumb span { color: var(--gold); }
+    .hero-breadcrumb svg { width: 12px; height: 12px; opacity: .4; }
+    .about-hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(34px, 5.5vw, 62px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      max-width: 760px;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 32px rgba(0,0,0,.4);
+    }
+    .about-hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-tagline {
+      font-size: 16px;
+      color: rgba(255,255,255,.6);
+      max-width: 520px;
+      line-height: 1.7;
+      border-left: 3px solid var(--green-light);
+      padding-left: 18px;
+    }
+    /* Decorative vertical text */
+    .hero-side-text {
+      position: absolute;
+      right: 56px; top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      transform-origin: center center;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.2);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* ─── STAT STRIP ─── */
+    .stat-strip {
+      background: var(--green-dark);
+      padding: 0;
+    }
+    .stat-strip-inner {
+      max-width: 1280px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .stat-item {
+      padding: 28px 32px;
+      border-right: 1px solid rgba(255,255,255,.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: var(--font-head);
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-num sup { font-size: 18px; vertical-align: super; }
+    .stat-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,.5); margin-top: 6px; font-weight: 500; }
+
+    /* ─── SECTION COMMONS ─── */
+    section { padding: 80px 0; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .section-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--green); font-weight: 600; margin-bottom: 10px; }
+    .section-title { font-family: var(--font-head); font-size: clamp(26px, 4vw, 40px); font-weight: 700; color: var(--dark); line-height: 1.2; margin-bottom: 16px; }
+    .section-sub { font-size: 15px; color: var(--mid); line-height: 1.75; }
+    .divider { width: 48px; height: 3px; background: var(--green); margin: 16px 0 28px; }
+
+    /* ─── WHO WE ARE ─── */
+    .who-we-are { background: var(--light); }
+    .who-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; align-items: center; }
+    .who-text p { font-size: 15px; color: var(--mid); line-height: 1.8; margin-bottom: 18px; }
+    .who-text p:first-of-type { font-size: 17px; color: var(--dark); font-weight: 400; border-left: 3px solid var(--green); padding-left: 18px; margin-bottom: 28px; }
+
+    .who-img-stack { position: relative; }
+    .who-img-main {
+      width: 100%; height: 440px; border-radius: 16px; overflow: hidden;
+      box-shadow: 0 24px 72px rgba(0,0,0,.14);
+    }
+    .who-img-main img { width: 100%; height: 100%; object-fit: cover; }
+    .who-img-badge {
+      position: absolute;
+      bottom: -24px; left: -24px;
+      background: var(--green-dark);
+      color: #fff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 12px 40px rgba(44,95,52,.4);
+      min-width: 160px;
+    }
+    .who-img-badge .badge-num {
+      font-family: var(--font-head);
+      font-size: 42px; font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .who-img-badge .badge-text { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.7); margin-top: 4px; }
+
+    /* ─── OUR STORY / TIMELINE ─── */
+    .our-story { background: var(--dark-green); position: relative; overflow: hidden; }
+    .our-story::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(58,125,68,.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .story-header { text-align: center; margin-bottom: 64px; }
+    .story-header .section-label { color: var(--gold); }
+    .story-header .section-title { color: #fff; }
+    .story-header .divider { background: var(--gold); margin: 16px auto 24px; }
+    .story-header p { color: rgba(255,255,255,.5); font-size: 16px; max-width: 540px; margin: 0 auto; line-height: 1.7; }
+
+    /* Timeline */
+    .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, transparent, rgba(90,175,106,.3) 10%, rgba(90,175,106,.3) 90%, transparent);
+      transform: translateX(-50%);
+    }
+    .tl-item {
+      display: grid;
+      grid-template-columns: 1fr 56px 1fr;
+      gap: 0;
+      margin-bottom: 48px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .tl-item.visible { opacity: 1; transform: translateY(0); }
+    .tl-item:last-child { margin-bottom: 0; }
+    .tl-left { text-align: right; padding-right: 32px; padding-top: 4px; }
+    .tl-right { text-align: left; padding-left: 32px; padding-top: 4px; }
+    .tl-center { display: flex; flex-direction: column; align-items: center; }
+    .tl-dot {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--green-dark);
+      border: 3px solid var(--green-light);
+      z-index: 2;
+      flex-shrink: 0;
+    }
+    .tl-dot.gold { border-color: var(--gold); background: rgba(201,168,76,.15); }
+    .tl-line { flex: 1; width: 2px; background: rgba(90,175,106,.15); }
+    .tl-year {
+      font-family: var(--font-head);
+      font-size: 13px; font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .tl-title { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 6px; }
+    .tl-desc { font-size: 13px; color: rgba(255,255,255,.45); line-height: 1.65; }
+    /* Alternating sides */
+    .tl-item:nth-child(odd) .tl-right { display: none; }
+    .tl-item:nth-child(even) .tl-left { display: none; }
+    .tl-item:nth-child(even) .tl-right { padding-left: 32px; }
+
+    /* ─── MANUFACTURING ─── */
+    .manufacturing { background: var(--white); }
+    .mfg-header { margin-bottom: 56px; }
+    .mfg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .mfg-img {
+      position: relative;
+      height: 480px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 24px 72px rgba(0,0,0,.13);
+    }
+    .mfg-img img { width: 100%; height: 100%; object-fit: cover; }
+    .mfg-img::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,30,14,.7) 0%, transparent 55%);
+    }
+    .mfg-img-caption {
+      position: absolute; bottom: 24px; left: 24px;
+      z-index: 2;
+      color: #fff;
+    }
+    .mfg-img-caption strong { font-family: var(--font-head); font-size: 18px; display: block; }
+    .mfg-img-caption span { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+
+    .mfg-features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+    .mfg-feat {
+      background: var(--light);
+      border-radius: 10px;
+      padding: 20px;
+      border-top: 3px solid var(--green);
+      transition: box-shadow .25s, transform .25s;
+    }
+    .mfg-feat:hover { box-shadow: 0 8px 28px rgba(0,0,0,.08); transform: translateY(-2px); }
+    .mfg-feat-icon { font-size: 22px; margin-bottom: 10px; }
+    .mfg-feat h4 { font-family: var(--font-head); font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+    .mfg-feat p { font-size: 12px; color: var(--mid); line-height: 1.6; margin: 0; }
+
+    /* Capability list */
+    .capability-list { list-style: none; margin-top: 24px; }
+    .capability-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 14px; color: var(--mid);
+      padding: 10px 0; border-bottom: 1px solid var(--border);
+      line-height: 1.6;
+    }
+    .capability-list li:last-child { border-bottom: none; }
+    .capability-list .ci {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--green); flex-shrink: 0; margin-top: 7px;
+    }
+
+    /* ─── VALUES ─── */
+    .values-section { background: var(--light); }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+    .value-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 32px 28px;
+      border-bottom: 3px solid var(--green);
+      box-shadow: 0 4px 20px rgba(0,0,0,.05);
+      transition: box-shadow .3s, transform .3s;
+    }
+    .value-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,.1); transform: translateY(-4px); }
+    .value-icon { font-size: 30px; margin-bottom: 16px; }
+    .value-card h3 { font-family: var(--font-head); font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
+    .value-card p { font-size: 13px; color: var(--mid); line-height: 1.7; margin: 0; }
+
+    /* ─── PARTNERS ─── */
+    .partners-section { background: var(--dark); position: relative; overflow: hidden; }
+    .partners-section::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 50%, rgba(58,125,68,.08) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 50%, rgba(201,168,76,.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .partners-header { text-align: center; margin-bottom: 64px; position: relative; }
+    .partners-header .section-label { color: var(--gold); }
+    .partners-header .section-title { color: #fff; }
+    .partners-header .divider { background: var(--gold); margin: 16px auto 24px; }
+    .partners-header p { color: rgba(255,255,255,.45); font-size: 15px; max-width: 480px; margin: 0 auto; line-height: 1.7; }
+
+    .partners-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; position: relative; }
+    .partner-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: border-color .3s, box-shadow .3s, transform .3s;
+      position: relative;
+    }
+    .partner-card:hover {
+      border-color: rgba(201,168,76,.3);
+      box-shadow: 0 24px 64px rgba(0,0,0,.4);
+      transform: translateY(-4px);
+    }
+    .partner-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(to right, var(--green), var(--gold));
+    }
+
+    .partner-avatar-area {
+      padding: 40px 40px 28px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .partner-monogram {
+      width: 96px; height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green-dark) 0%, #1a3a1e 100%);
+      border: 2px solid rgba(201,168,76,.4);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,.4);
+    }
+    .partner-monogram span {
+      font-family: var(--font-head);
+      font-size: 30px; font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+    .partner-title-block {}
+    .partner-name {
+      font-family: var(--font-head);
+      font-size: 22px; font-weight: 700;
+      color: #fff; line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    .partner-role {
+      font-size: 10px; letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .partner-tag {
+      display: inline-block; margin-top: 8px;
+      font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: rgba(255,255,255,.35);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px; padding: 3px 10px;
+    }
+
+    .partner-divider { height: 1px; background: rgba(255,255,255,.07); margin: 0 40px; }
+
+    .partner-body { padding: 28px 40px 36px; }
+    .partner-body p { font-size: 14px; color: rgba(255,255,255,.55); line-height: 1.8; margin-bottom: 16px; }
+    .partner-body p:last-of-type { margin-bottom: 24px; }
+    .partner-quote {
+      border-left: 3px solid var(--gold);
+      padding-left: 18px;
+      font-family: var(--font-head);
+      font-style: italic;
+      font-size: 15px;
+      color: rgba(255,255,255,.75);
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+    .partner-links { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
+    .partner-link-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+      font-weight: 600;
+      color: rgba(255,255,255,.45);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 4px;
+      padding: 7px 14px;
+      transition: all .2s;
+    }
+    .partner-link-btn:hover { color: var(--gold); border-color: rgba(201,168,76,.4); background: rgba(201,168,76,.06); }
+    .partner-link-btn svg { width: 13px; height: 13px; }
+
+    /* ─── CERTIFICATIONS BAND ─── */
+    .cert-band { background: var(--green-dark); padding: 40px 0; }
+    .cert-band-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+    .cert-band-text h3 { font-family: var(--font-head); font-size: 22px; color: #fff; font-weight: 700; }
+    .cert-band-text p { font-size: 13px; color: rgba(255,255,255,.5); margin-top: 4px; }
+    .cert-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+    .cert-badge {
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 6px;
+      padding: 10px 16px;
+      font-size: 12px; font-weight: 600;
+      color: rgba(255,255,255,.8);
+      letter-spacing: .3px;
+    }
+    .cert-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green-light); flex-shrink: 0; }
+
+    /* ─── CTA ─── */
+    .cta-section { background: var(--dark-green); padding: 80px 0; }
+    .cta-inner { max-width: 760px; margin: 0 auto; text-align: center; padding: 0 24px; }
+    .cta-inner .section-label { color: var(--gold); justify-content: center; display: block; }
+    .cta-inner h2 { font-family: var(--font-head); font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 16px; }
+    .cta-inner p { color: rgba(255,255,255,.5); font-size: 15px; line-height: 1.75; margin-bottom: 36px; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 14px 34px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; border-radius: 2px; cursor: pointer; transition: background .2s, transform .2s; }
+    .btn-green { background: var(--green); color: #fff; }
+    .btn-green:hover { background: var(--green-dark); transform: translateY(-1px); }
+    .btn-outline-light { border: 2px solid rgba(255,255,255,.25); color: #fff; }
+    .btn-outline-light:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.5); }
+
+    /* ─── FOOTER ─── */
+    footer { background: #111; padding: 56px 0 0; }
+    .footer-grid { max-width: 1280px; margin: 0 auto; padding: 0 24px 40px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+    .footer-brand .logo-text { font-family: var(--font-head); font-size: 20px; font-weight: 700; color: var(--green-light); display: block; }
+    .footer-brand .logo-sub { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); display: block; margin-top: 2px; margin-bottom: 14px; }
+    .footer-brand p { font-size: 13px; color: #555; line-height: 1.7; max-width: 260px; }
+    .social-links { display: flex; gap: 10px; margin-top: 18px; }
+    .social-link { width: 34px; height: 34px; border-radius: 50%; border: 1px solid #333; display: flex; align-items: center; justify-content: center; color: #555; transition: all .2s; }
+    .social-link:hover { border-color: var(--green); color: var(--green-light); background: rgba(58,125,68,.1); }
+    footer h4 { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #888; margin-bottom: 16px; font-weight: 600; }
+    footer ul { list-style: none; }
+    footer ul li { margin-bottom: 10px; }
+    footer ul li a { font-size: 13px; color: #555; transition: color .2s; }
+    footer ul li a:hover { color: var(--green-light); }
+    .footer-bottom { max-width: 1280px; margin: 0 auto; padding: 18px 24px; border-top: 1px solid #222; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .footer-bottom p { font-size: 11px; color: #444; letter-spacing: .3px; }
+    .footer-bottom a { color: #555; }
+    .back-top { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #444; cursor: pointer; transition: color .2s; }
+    .back-top:hover { color: var(--green-light); }
+
+    /* ─── COOKIE BANNER ─── */
+    #cookieBanner { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999; background: #1a1a1a; border-top: 2px solid #3a7d44; padding: 18px 24px; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; box-shadow: 0 -4px 24px rgba(0,0,0,.3); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .who-grid, .mfg-grid { grid-template-columns: 1fr; }
+      .who-img-badge { bottom: -16px; left: -8px; }
+      .who-img-stack { margin-bottom: 40px; }
+      .mfg-img { height: 300px; order: -1; }
+      .partners-grid { grid-template-columns: 1fr; }
+      .stat-strip-inner { grid-template-columns: repeat(2, 1fr); }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .about-hero { height: 440px; }
+      .about-hero-overlay { padding: 32px 28px 48px; }
+      .stat-strip-inner { grid-template-columns: repeat(2, 1fr); }
+      .stat-item { padding: 20px 16px; }
+      .stat-num { font-size: 28px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .timeline::before { left: 24px; }
+      .tl-item { grid-template-columns: 24px 1fr; }
+      .tl-item:nth-child(odd) .tl-right,
+      .tl-item:nth-child(even) .tl-right { display: block; padding-left: 20px; }
+      .tl-item:nth-child(odd) .tl-left,
+      .tl-item:nth-child(even) .tl-left { display: none; }
+      .tl-center { align-items: flex-start; }
+      .partner-avatar-area { padding: 28px 24px 20px; gap: 18px; }
+      .partner-body { padding: 20px 24px 28px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .cert-band-inner { flex-direction: column; align-items: flex-start; }
+      .hero-side-text { display: none; }
+      .mfg-features { grid-template-columns: 1fr; }
+    }
+
+    /* Hide Google Translate bar */
+    .goog-te-banner-frame, .skiptranslate { display: none !important; }
+    body { top: 0 !important; }
+
+    /* Scroll animation */
+    .fade-up {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="../index.html" class="nav-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Home
+    </a>
+    <a href="../index.html" class="nav-logo">
+      <span class="logo-text">DivinaECO Pack</span>
+      <span class="logo-sub">Greece</span>
+    </a>
+    <div class="nav-right">
+      <a href="../index.html#contact" class="nav-item">Contact</a>
+      <div class="lang-toggle">
+        <button class="lang-btn lang-active" data-lang="en" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" data-lang="el" onclick="switchLang('el')">EL</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<div class="about-hero">
+  <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&fit=crop&q=80" alt="DivinaECO Pack — Our Story" />
+  <div class="about-hero-overlay">
+    <div class="hero-breadcrumb">
+      Home
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <span>About Us</span>
+    </div>
+    <h1>Building <em>Sustainable</em> Packaging<br>for a Better Future</h1>
+    <p class="hero-tagline">From manufacturing expertise to global supply — our journey is built on quality, innovation, and responsibility.</p>
+  </div>
+  <div class="hero-side-text">DivinaECO Pack · Greece · IKE</div>
+</div>
+
+<!-- ─── STAT STRIP ─── -->
+<div class="stat-strip">
+  <div class="stat-strip-inner">
+    <div class="stat-item">
+      <div class="stat-num">35<sup>+</sup></div>
+      <div class="stat-label">Years of Manufacturing</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100<sup>+</sup></div>
+      <div class="stat-label">Satisfied Customers</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3<sup>+</sup></div>
+      <div class="stat-label">Continents Served</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100<sup>%</sup></div>
+      <div class="stat-label">In-House Production</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── WHO WE ARE ─── -->
+<section class="who-we-are" id="who-we-are">
+  <div class="container">
+    <div class="who-grid">
+      <div class="who-text fade-up">
+        <p class="section-label">About DivinaECO Pack</p>
+        <h2 class="section-title">Who We Are</h2>
+        <div class="divider"></div>
+        <p>At DivinaECO Pack, we are not just suppliers of packaging — we are partners in building sustainable, high-quality solutions for global businesses.</p>
+        <p>Backed by over three decades of uninterrupted manufacturing heritage, we exist at the intersection of environmental responsibility and outstanding product quality. Every cup, every lid, every sleeve we produce is a statement of intent: that commercial success and ecological care are not opposites.</p>
+        <p>We serve cafes, restaurants, quick-service chains, hotels, food delivery brands, and FMCG businesses across Europe, the Middle East, and beyond — delivering both stock products for immediate dispatch and fully customised branded packaging, with precision and care.</p>
+        <div style="margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="../index.html#contact" class="btn btn-green">Get In Touch</a>
+          <a href="../index.html#categories" class="btn" style="border: 2px solid var(--green); color: var(--green); padding: 14px 34px;">Our Products</a>
+        </div>
+      </div>
+      <div class="who-img-stack fade-up" style="transition-delay:.15s;">
+        <div class="who-img-main">
+          <img src="images/factory/factory-4.jpg" alt="DivinaECO Pack — Our Facility" onerror="this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&fit=crop&q=80'" />
+        </div>
+        <div class="who-img-badge">
+          <div class="badge-num">1992</div>
+          <div class="badge-text">Founded</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── OUR JOURNEY ─── -->
+<section style="padding:80px 0; background:#fff;" id="our-story">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 380px;gap:80px;align-items:start;" class="fade-up">
+
+      <!-- LEFT: Story text -->
+      <div>
+        <p class="section-label">How It Started</p>
+        <h2 class="section-title">Our Journey</h2>
+        <div class="divider"></div>
+
+        <p style="font-size:17px;color:var(--dark);line-height:1.85;border-left:3px solid var(--green);padding-left:18px;margin-bottom:28px;">It began with a single production line, a manufacturing floor, and an unshakeable belief that packaging could be done better — more responsibly, more consistently, and at a quality the world deserved.</p>
+
+        <p style="font-size:15px;color:var(--mid);line-height:1.85;margin-bottom:20px;">Our roots go back over 30 years. What started as a focused manufacturing operation producing paper-based packaging has grown, over three decades of persistent work, into a full-scale production facility serving clients across continents. The journey was never linear — it was built through investment, adaptation, and a refusal to cut corners.</p>
+
+        <p style="font-size:15px;color:var(--mid);line-height:1.85;margin-bottom:20px;">The first major shift came with scale. As capacity grew and new machinery came online, export markets opened — Europe first, then further afield. Each new market brought new standards, new expectations, and new reasons to push quality further. We met every one of them.</p>
+
+        <p style="font-size:15px;color:var(--mid);line-height:1.85;margin-bottom:20px;">The second shift was philosophical. As environmental awareness grew worldwide, we made a pivotal decision: to transition entirely to sustainable, food-safe, eco-friendly materials. Plant-based PLA linings. FSC-certified paperboard. 100% recyclable ranges. We didn't follow a trend — we committed to a direction.</p>
+
+        <p style="font-size:15px;color:var(--mid);line-height:1.85;margin-bottom:0;">Today, DivinaECO Pack operates at the intersection of 30+ years of manufacturing experience and a forward-looking commitment to sustainability. From Athens to the world — we bring the same discipline, the same standards, and the same pride to every order we fulfil.</p>
+      </div>
+
+      <!-- RIGHT: Key milestones panel -->
+      <div style="position:sticky;top:100px;">
+        <div style="background:var(--dark-green);border-radius:16px;padding:40px 36px;color:#fff;">
+          <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:24px;">The Numbers</p>
+
+          <div style="border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:24px;margin-bottom:24px;">
+            <div style="font-family:var(--font-head);font-size:48px;font-weight:700;color:var(--gold);line-height:1;">30<span style="font-size:24px;">+</span></div>
+            <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:6px;">Years of Manufacturing</div>
+          </div>
+
+          <div style="border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:24px;margin-bottom:24px;">
+            <div style="font-family:var(--font-head);font-size:48px;font-weight:700;color:var(--gold);line-height:1;">100<span style="font-size:24px;">%</span></div>
+            <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:6px;">In-House Production</div>
+          </div>
+
+          <div style="border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:24px;margin-bottom:24px;">
+            <div style="font-family:var(--font-head);font-size:48px;font-weight:700;color:var(--gold);line-height:1;">3<span style="font-size:24px;">+</span></div>
+            <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:6px;">Continents Served</div>
+          </div>
+
+          <div style="background:rgba(255,255,255,.05);border-left:3px solid var(--green-light);padding:18px 20px;border-radius:0 8px 8px 0;margin-top:8px;">
+            <p style="font-family:var(--font-head);font-style:italic;font-size:14px;color:rgba(255,255,255,.7);line-height:1.7;margin:0;">"From a single production line to a global eco-packaging brand — built on persistence, quality, and the courage to do things right."</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHAT WE DO ─── -->
+<section style="padding:80px 0;background:var(--light);" id="what-we-do">
+  <div class="container">
+    <div class="fade-up" style="max-width:760px;">
+      <p class="section-label">What We Do Today</p>
+      <h2 class="section-title">Our Products &amp; Services</h2>
+      <div class="divider"></div>
+      <p style="font-size:17px;color:var(--dark);line-height:1.85;border-left:3px solid var(--green);padding-left:18px;margin-bottom:28px;">We are a full-service eco-packaging company — manufacturing, customising, and exporting sustainable paper-based packaging to businesses worldwide.</p>
+      <p style="font-size:15px;color:var(--mid);line-height:1.85;margin-bottom:20px;">Our core product range is built around paper cups — from single wall and double wall to ripple wall — designed for hot and cold beverage service, built to food-safe standards, and available in stock sizes or fully branded custom print. We also produce a range of packaging solutions including grill boxes, food containers, and sleeve packaging for the HORECA and food service markets.</p>
+      <p style="font-size:15px;color:var(--mid);line-height:1.85;margin-bottom:20px;">Custom printing is a core part of what we offer. Our in-house print capability means brands can put their identity on every cup and box — with precise colour reproduction, consistent results at scale, and no reliance on third parties.</p>
+      <p style="font-size:15px;color:var(--mid);line-height:1.85;margin-bottom:0;">Our export markets include the United States, the United Kingdom, the Middle East, and across Europe. Every market we serve receives the same standard of quality, the same responsiveness, and the same commitment to getting it right.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MANUFACTURING ─── -->
+<section class="manufacturing" id="manufacturing">
+  <div class="container">
+    <div class="mfg-header fade-up">
+      <p class="section-label">How We Make It</p>
+      <h2 class="section-title">In-House Manufacturing Excellence</h2>
+      <div class="divider"></div>
+      <p class="section-sub" style="max-width:640px;">Every product bearing the DivinaECO name is conceived, designed, and produced entirely within our own facility — giving us complete control over quality, consistency, and customisation at every step.</p>
+    </div>
+
+    <div class="mfg-grid">
+      <div class="mfg-img fade-up">
+        <img src="images/factory/factory-5.jpg" alt="DivinaECO Pack Manufacturing Line" onerror="this.src='https://images.unsplash.com/photo-1565793979405-4b82a03c4df6?w=800&fit=crop&q=80'" />
+        <div class="mfg-img-caption">
+          <span>Our Production Floor</span>
+          <strong>State-of-the-Art Facility</strong>
+        </div>
+      </div>
+
+      <div class="fade-up" style="transition-delay:.15s;">
+        <p style="font-size:15px;color:var(--mid);line-height:1.8;margin-bottom:20px;">Unlike distributors who resell products, DivinaECO operates its own end-to-end production line. From raw paperboard sourcing to cup forming, printing and final QC — everything happens under one roof, under our direct supervision.</p>
+        <p style="font-size:15px;color:var(--mid);line-height:1.8;margin-bottom:28px;">This vertically integrated model means shorter lead times, tighter tolerances, superior consistency, and the flexibility to accommodate custom orders that third-party distributors simply cannot match.</p>
+
+        <ul class="capability-list">
+          <li><span class="ci"></span><span><strong>Single, Double &amp; Triple Wall</strong> cup forming lines — catering to hot beverages, cold drinks and specialty coffee.</span></li>
+          <li><span class="ci"></span><span><strong>Offset &amp; Flexo Printing</strong> up to 4 colours — precise logo reproduction on every unit.</span></li>
+          <li><span class="ci"></span><span><strong>Plant-Based PLA Lining</strong> — food-safe, biodegradable inner coating replacing conventional plastic films.</span></li>
+          <li><span class="ci"></span><span><strong>Grill Boxes &amp; Food Packaging</strong> — robust, grease-resistant kraft-based packaging for HORECA and food service.</span></li>
+          <li><span class="ci"></span><span><strong>In-House Quality Control</strong> — every batch is tested for dimensional accuracy, leak integrity and print fidelity before dispatch.</span></li>
+          <li><span class="ci"></span><span><strong>Custom MOQ from 10,000 pcs</strong> — accessible custom print runs for growing brands without inflated minimums.</span></li>
+        </ul>
+
+        <div class="mfg-features">
+          <div class="mfg-feat">
+            <div class="mfg-feat-icon">🏭</div>
+            <h4>Own Factory</h4>
+            <p>Fully-owned production facility with no third-party dependency, ensuring supply chain stability.</p>
+          </div>
+          <div class="mfg-feat">
+            <div class="mfg-feat-icon">🔬</div>
+            <h4>BRC Standards</h4>
+            <p>All processes aligned with globally recognised BRC food-safety and quality standards.</p>
+          </div>
+          <div class="mfg-feat">
+            <div class="mfg-feat-icon">🌿</div>
+            <h4>Eco Materials</h4>
+            <p>100% FSC-certified paperboard and PLA-based coatings — no conventional plastics in our range.</p>
+          </div>
+          <div class="mfg-feat">
+            <div class="mfg-feat-icon">🎨</div>
+            <h4>Custom Branding</h4>
+            <p>In-house print capability means your brand looks exactly as designed — every time, at scale.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GLOBAL PRESENCE ─── -->
+<section style="padding:80px 0;background:var(--light);" id="global">
+  <div class="container">
+    <div class="fade-up" style="max-width:760px;">
+      <p class="section-label">Our Reach</p>
+      <h2 class="section-title">Serving Clients Worldwide</h2>
+      <div class="divider"></div>
+      <p style="font-size:17px;color:var(--dark);line-height:1.85;border-left:3px solid var(--green);padding-left:18px;margin-bottom:28px;">DivinaECO Pack is not a local supplier with global ambitions — we are an established global manufacturer with local presence.</p>
+      <p style="font-size:15px;color:var(--mid);line-height:1.85;margin-bottom:20px;">Our products are exported to clients in the United States, the United Kingdom, and across the Middle East and Europe. Each market is served through a well-established logistics network, with reliable lead times, consistent product availability, and a team that is responsive at every stage of the order process.</p>
+      <p style="font-size:15px;color:var(--mid);line-height:1.85;margin-bottom:20px;">Our Athens-based operation acts as the dedicated commercial face for European and Greek markets — combining the scale of international-grade manufacturing with the attentiveness of a local partner. Clients are not managed by a system. They are managed by people who know their business, understand their timelines, and are invested in long-term relationships.</p>
+      <p style="font-size:15px;color:var(--mid);line-height:1.85;margin-bottom:0;">Wherever you are in the world, if you need sustainable packaging that performs — we are ready to work with you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PARTNERS ─── -->
+<section class="partners-section" id="partners">
+  <div class="container">
+    <div class="partners-header fade-up">
+      <p class="section-label">The People Behind It</p>
+      <h2 class="section-title">Leadership</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="partners-grid">
+
+      <!-- Partner 1 — Manik Wani -->
+      <div class="partner-card fade-up">
+        <div class="partner-avatar-area">
+          <div class="partner-monogram">
+            <span>MW</span>
+          </div>
+          <div class="partner-title-block">
+            <div class="partner-name">Mr. Manik Wani</div>
+            <div class="partner-role">Partner</div>
+          </div>
+        </div>
+        <div class="partner-divider"></div>
+        <div class="partner-body">
+          <p>Leads operations, manufacturing excellence, and strategic growth.</p>
+          <div class="partner-links">
+            <a href="mailto:manikw@divinaeco.gr" class="partner-link-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              manikw@divinaeco.gr
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Partner 2 — Mirchel Soukalas -->
+      <div class="partner-card fade-up" style="transition-delay:.15s;">
+        <div class="partner-avatar-area">
+          <div class="partner-monogram" style="background: linear-gradient(135deg, #2a1a04 0%, #3d2a08 100%); border-color: rgba(201,168,76,.5);">
+            <span>MS</span>
+          </div>
+          <div class="partner-title-block">
+            <div class="partner-name">Mr. Mirchel Soukalas</div>
+            <div class="partner-role">Partner</div>
+          </div>
+        </div>
+        <div class="partner-divider"></div>
+        <div class="partner-body">
+          <p>Oversees international business development and client relations across global markets.</p>
+          <div class="partner-links">
+            <a href="mailto:mtsoukalas@divinaeco.gr" class="partner-link-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              mtsoukalas@divinaeco.gr
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── CERTIFICATIONS BAND ─── -->
+<div class="cert-band">
+  <div class="cert-band-inner">
+    <div class="cert-band-text">
+      <h3>Certified, Compliant &amp; Accountable</h3>
+      <p>Our products and processes meet internationally recognised standards.</p>
+    </div>
+    <div class="cert-badges">
+      <div class="cert-badge"><span class="dot"></span> BRC Aligned Standards</div>
+      <div class="cert-badge"><span class="dot"></span> FSC Certified Paperboard</div>
+      <div class="cert-badge"><span class="dot"></span> PLA Biodegradable Lining</div>
+      <div class="cert-badge"><span class="dot"></span> 100% Recyclable Range</div>
+      <div class="cert-badge"><span class="dot"></span> Food-Safe Contact Certified</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── CTA ─── -->
+<section class="cta-section">
+  <div class="cta-inner fade-up">
+    <p class="section-label">Work With Us</p>
+    <h2>Let's Build Sustainable<br>Packaging Together</h2>
+    <p>Whether you need stock products for immediate dispatch or a fully customised branded range, our team is ready to help you find the right solution. We respond within 24 hours.</p>
+    <div class="cta-btns">
+      <a href="../index.html#contact" class="btn btn-green">Request a Quote</a>
+      <a href="../index.html#contact" class="btn btn-outline-light">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo-text">DivinaECO Pack</span>
+      <span class="logo-sub">Eco Packaging · Greece</span>
+      <p>Quality eco-friendly packaging for restaurants, cafes, hotels and HORECA chains. Produced with respect for the environment and dedication to quality.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/Divinaeco" class="social-link" title="Facebook" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/divinaeco_pack/" class="social-link" title="Instagram" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/divinaecopack/posts/?feedView=all" class="social-link" title="LinkedIn" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="products/single-wall-cups.html">Single Wall Paper Cups</a></li>
+        <li><a href="products/double-wall-cups.html">Double Wall Paper Cups</a></li>
+        <li><a href="products/triple-wall-cups.html">Ripple Wall Paper Cups</a></li>
+        <li><a href="products/grill-box.html">Grill Boxes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="news/environment.html">Sustainability</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p style="color:#555;font-size:13px;margin-bottom:8px;">&#9990; <a href="tel:+306936790308" style="color:#666;">+30 693 679 0308</a></p>
+      <p style="color:#555;font-size:13px;margin-bottom:8px;">WhatsApp: <a href="https://wa.me/919307139899" style="color:#666;" target="_blank">+91 9307139899</a></p>
+      <p style="color:#555;font-size:13px;margin-bottom:4px;"><strong style="color:#888;">Email:</strong></p>
+      <p style="margin-bottom:4px;"><a href="mailto:info@divinaeco.gr" style="color:#666;font-size:13px;">info@divinaeco.gr</a></p>
+      <p style="margin-bottom:4px;"><a href="mailto:mtsoukalas@divinaeco.gr" style="color:#666;font-size:13px;">mtsoukalas@divinaeco.gr</a></p>
+      <p style="margin-bottom:4px;"><a href="mailto:manikw@divinaeco.gr" style="color:#666;font-size:13px;">manikw@divinaeco.gr</a></p>
+      <p style="color:#555;font-size:12px;margin-top:12px;line-height:1.6;">265 Kifisias Avenue,<br>14561 Kifisia, Athens, Greece</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 DivinaECO Pack IKE. ALL RIGHTS RESERVED. | <a href="terms-of-use.html">Terms of Use</a> | <a href="#">Cookie Policy</a></p>
+    <span class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ BACK TO TOP</span>
+  </div>
+</footer>
+
+<!-- ─── COOKIE BANNER ─── -->
+<div id="cookieBanner">
+  <p style="color:#ccc;font-size:13px;max-width:680px;line-height:1.6;margin:0;">
+    🍪 We use cookies to improve your experience and analyse site traffic. Analytics cookies are only activated with your consent.
+    <a href="privacy-policy.html" style="color:#5aaf6a;margin-left:6px;">Learn more</a>
+  </p>
+  <div style="display:flex;gap:10px;flex-shrink:0;">
+    <button onclick="rejectCookies()" style="padding:9px 20px;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;border:2px solid #555;background:transparent;color:#aaa;border-radius:2px;cursor:pointer;">Reject</button>
+    <button onclick="acceptCookies()" style="padding:9px 20px;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;background:#3a7d44;border:2px solid #3a7d44;color:#fff;border-radius:2px;cursor:pointer;">Accept</button>
+  </div>
+</div>
+
+<!-- ─── GOOGLE TRANSLATE ─── -->
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'el,en', autoDisplay: false }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+  // Cookie banner
+  (function() {
+    if (!localStorage.getItem('cookie_consent')) document.getElementById('cookieBanner').style.display = 'flex';
+  })();
+  function acceptCookies() { localStorage.setItem('cookie_consent','accepted'); document.getElementById('cookieBanner').style.display='none'; }
+  function rejectCookies() { localStorage.setItem('cookie_consent','rejected'); document.getElementById('cookieBanner').style.display='none'; }
+
+  // Language switcher
+  function switchLang(lang) {
+    var attempts = 0;
+    function trySwitch() {
+      var sel = document.querySelector('.goog-te-combo');
+      if (sel) {
+        sel.value = lang; sel.dispatchEvent(new Event('change'));
+        document.querySelectorAll('.lang-btn').forEach(function(btn) { btn.classList.toggle('lang-active', btn.getAttribute('data-lang') === lang); });
+        localStorage.setItem('preferred_lang', lang);
+      } else if (attempts < 20) { attempts++; setTimeout(trySwitch, 200); }
+    }
+    trySwitch();
+  }
+  window.addEventListener('load', function() {
+    var preferred = localStorage.getItem('preferred_lang');
+    if (preferred && preferred !== 'en') setTimeout(function() { switchLang(preferred); }, 800);
+  });
+
+  // Scroll reveal
+  function revealOnScroll() {
+    var els = document.querySelectorAll('.fade-up, .tl-item');
+    var wh = window.innerHeight;
+    els.forEach(function(el) {
+      var rect = el.getBoundingClientRect();
+      if (rect.top < wh - 80) el.classList.add('visible');
+    });
+  }
+  window.addEventListener('scroll', revealOnScroll, { passive: true });
+  window.addEventListener('load', revealOnScroll);
+  revealOnScroll();
+</script>
+
+</body>
+</html>

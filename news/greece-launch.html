@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DivinaECO Pack launches in Greece | DivinaECO Pack</title>
+  <meta name="description" content="Exciting news – Divina Eco Pack officially launches in Greece, bringing premium eco-friendly packaging solutions to the Greek market.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #3a7d44; --green-dark: #2c5f34; --green-light: #5aaf6a;
+      --gold: #c9a84c; --dark: #1a1a1a; --mid: #4a4a4a;
+      --light: #f5f5f0; --white: #ffffff; --border: #e0ddd5;
+      --font-head: 'Playfair Display', serif; --font-body: 'DM Sans', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--dark); background: var(--white); font-size: 15px; line-height: 1.65; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ─── NAVBAR ─── */
+    .navbar { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.07); }
+    .navbar-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 72px; }
+    .nav-left { display: flex; gap: 8px; align-items: center; }
+    .nav-logo { text-align: center; }
+    .nav-logo .logo-text { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--green-dark); }
+    .nav-logo .logo-sub { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); display: block; margin-top: -2px; }
+    .nav-back { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--mid); font-weight: 500; display: flex; align-items: center; gap: 6px; transition: color .2s; }
+    .nav-back:hover { color: var(--green); }
+    .nav-back svg { width: 14px; height: 14px; }
+    .nav-right { display: flex; gap: 20px; align-items: center; justify-content: flex-end; }
+    .nav-item {
+      position: relative;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: .4px;
+      text-transform: uppercase;
+      padding: 8px 4px;
+      color: var(--dark);
+      transition: color .2s;
+      cursor: pointer;
+    }
+
+    /* ─── HERO ─── */
+    .article-hero { position: relative; height: 480px; overflow: hidden; background: var(--dark); }
+    .article-hero img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.65); }
+    .article-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,25,14,.85) 0%, rgba(10,25,14,.3) 55%, transparent 100%);
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 48px;
+    }
+    .article-tag { display: inline-block; font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 600; border: 1px solid rgba(201,168,76,.5); padding: 4px 12px; border-radius: 2px; margin-bottom: 16px; width: fit-content; }
+    .article-hero h1 { font-family: var(--font-head); font-size: clamp(26px, 4vw, 44px); font-weight: 700; color: #fff; line-height: 1.2; max-width: 760px; margin-bottom: 16px; }
+    .article-meta { display: flex; align-items: center; gap: 20px; color: rgba(255,255,255,.5); font-size: 12px; letter-spacing: .5px; }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+
+    /* ─── BODY ─── */
+    .article-wrap { max-width: 780px; margin: 0 auto; padding: 64px 24px 80px; }
+    .article-lead { font-size: 18px; color: var(--mid); line-height: 1.75; font-weight: 400; margin-bottom: 32px; border-left: 3px solid var(--green); padding-left: 20px; }
+    .article-body h2 { font-family: var(--font-head); font-size: 24px; font-weight: 700; color: var(--dark); margin: 40px 0 16px; }
+    .article-body p { font-size: 15px; color: var(--mid); line-height: 1.8; margin-bottom: 20px; }
+    .article-body ul { margin: 0 0 20px 20px; }
+    .article-body ul li { font-size: 15px; color: var(--mid); line-height: 1.8; margin-bottom: 8px; }
+    .article-img { border-radius: 10px; overflow: hidden; margin: 36px 0; }
+    .article-img img { width: 100%; height: 320px; object-fit: cover; }
+    .article-img figcaption { font-size: 12px; color: #aaa; letter-spacing: .5px; margin-top: 10px; text-align: center; }
+
+    /* ─── HIGHLIGHT BOX ─── */
+    .highlight-box { background: var(--light); border-left: 3px solid var(--green); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 32px 0; }
+    .highlight-box p { font-size: 15px; color: var(--dark); font-weight: 500; margin: 0; line-height: 1.7; }
+
+    /* ─── CTA ─── */
+    .article-cta { background: var(--dark); border-radius: 12px; padding: 40px; text-align: center; margin-top: 56px; }
+    .article-cta h3 { font-family: var(--font-head); font-size: 24px; color: #fff; margin-bottom: 12px; }
+    .article-cta p { color: rgba(255,255,255,.55); font-size: 14px; margin-bottom: 24px; }
+    .btn-green { display: inline-block; padding: 13px 32px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; border-radius: 2px; background: var(--green); color: #fff; transition: background .2s; cursor: pointer; border: none; }
+    .btn-green:hover { background: var(--green-dark); }
+
+    /* ─── RELATED ─── */
+    .related { background: var(--light); padding: 64px 0; }
+    .related-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .related h2 { font-family: var(--font-head); font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+    .divider { width: 48px; height: 3px; background: var(--green); margin: 12px 0 32px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .related-card { background: var(--white); border-radius: 10px; overflow: hidden; border: 1px solid var(--border); display: flex; flex-direction: column; transition: box-shadow .25s, transform .25s; }
+    .related-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,.09); transform: translateY(-2px); }
+    .related-card-img { height: 160px; overflow: hidden; }
+    .related-card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-card-body { padding: 18px 20px; }
+    .related-tag { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--green); font-weight: 600; margin-bottom: 8px; }
+    .related-card-body h3 { font-family: var(--font-head); font-size: 16px; font-weight: 700; margin-bottom: 8px; line-height: 1.4; color: var(--dark); }
+    .related-card-foot { display: flex; justify-content: space-between; align-items: center; padding: 11px 20px; border-top: 1px solid var(--border); }
+    .related-date { font-size: 11px; color: #aaa; }
+    .related-read { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--green); font-weight: 600; }
+
+    /* ─── FOOTER ─── */
+    .footer-mini { background: var(--dark); padding: 28px 24px; text-align: center; }
+    .footer-mini p { color: #555; font-size: 12px; }
+    .footer-mini a { color: #666; }
+
+    @media (max-width: 640px) {
+      .article-hero { height: 320px; }
+      .article-hero-overlay { padding: 28px 20px; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+
+  /* ─── LANG TOGGLE ─── */
+  .lang-toggle { display: flex; gap: 4px; align-items: center; }
+  .lang-btn {
+    padding: 3px 9px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    border: 1.5px solid #ccc;
+    border-radius: 3px;
+    background: transparent;
+    color: var(--mid);
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .lang-btn:hover { border-color: var(--green); color: var(--green); }
+  .lang-active { background: var(--green) !important; border-color: var(--green) !important; color: #fff !important; }
+  /* Hide Google Translate bar */
+  .goog-te-banner-frame, .skiptranslate { display: none !important; }
+  body { top: 0 !important; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="../index.html" class="nav-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Home
+    </a>
+    <a href="../index.html" class="nav-logo">
+      <span class="logo-text">DivinaECO Pack</span>
+      <span class="logo-sub">Greece</span>
+    </a>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn lang-active" data-lang="en" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" data-lang="el" onclick="switchLang('el')">EL</button>
+      </div>
+        <div class="nav-icons">
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1400&fit=crop&q=80" alt="DivinaECO Pack Greece Launch" />
+  <div class="article-hero-overlay">
+    <span class="article-tag">Launch</span>
+    <h1>DivinaECO Pack launches in Greece — A new chapter in eco-friendly packaging</h1>
+    <div class="article-meta">
+      <span>01 March 2026</span>
+      <span>·</span>
+      <span>DivinaECO Pack Team</span>
+    </div>
+  </div>
+</div>
+
+<!-- Article body -->
+<div class="article-wrap">
+  <p class="article-lead">We are delighted to announce the official launch of DivinaECO Pack in the Greek market, bringing 25 years of manufacturing expertise and a full range of certified eco-friendly packaging solutions.</p>
+
+  <div class="article-body">
+    <p>After months of preparation and a careful study of the Greek and wider Mediterranean market, DivinaECO Pack is now officially operational in Greece. Our Athens-based office serves as the regional hub for Southern Europe, making it easier than ever for Greek businesses to access world-class eco-packaging at competitive prices.</p>
+
+    <h2>Why Greece?</h2>
+    <p>Greece stands at a pivotal moment in its transition toward sustainable business practices. The hospitality sector — one of the largest in Europe — is actively seeking alternatives to conventional single-use packaging. DivinaECO Pack is perfectly positioned to meet this demand with products that combine performance, aesthetics, and environmental responsibility.</p>
+
+    <div class="highlight-box">
+      <p>"Our mission is simple: bring the same quality we have delivered across five continents directly to the Greek market, with local support and faster delivery." — DivinaECO Pack Greece</p>
+    </div>
+
+    <figure class="article-img">
+      <img src="https://images.unsplash.com/photo-1716719130347-f7f025837f7c?q=80&w=1178&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Eco-friendly packaging products" />
+      <figcaption>Our core product range — available now for the Greek market</figcaption>
+    </figure>
+
+    <h2>What We Offer</h2>
+    <p>Our Greek portfolio covers the full spectrum of food service and retail packaging needs:</p>
+    <ul>
+      <li>BIO paper cups (espresso, take-away, cold drinks) — fully biodegradable</li>
+      <li>Kraft paper bags and wrapping — ideal for bakeries and delis</li>
+      <li>Corrugated boxes for grill, fast food and food delivery</li>
+      <li>Custom printed packaging with 10-day lead time</li>
+      <li>Certified compostable cutlery and lids</li>
+    </ul>
+
+    <h2>Local Stock, Fast Delivery</h2>
+    <p>All core products are held in local stock in Athens, meaning orders placed before 14:00 are dispatched same day for Attica region, and within 48 hours for the rest of Greece. For larger custom orders, our production team in India ensures a 10–15 day turnaround.</p>
+
+    <p>We are also proud to offer free samples for businesses that would like to test our products before committing to an order. Reach out via our contact page to request yours.</p>
+  </div>
+
+  <div class="article-cta">
+    <h3>Ready to switch to eco-friendly packaging?</h3>
+    <p>Request a free sample pack or speak with our team about the best solution for your business.</p>
+    <a href="../index.html#contact" class="btn-green">Get in Touch</a>
+  </div>
+</div>
+
+<!-- Related articles -->
+<section class="related">
+  <div class="related-inner">
+    <h2>More News</h2>
+    <div class="divider"></div>
+    <div class="related-grid">
+
+      <a href="bio-cups.html" class="related-card">
+        <div class="related-card-img">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&fit=crop&q=80" alt="BIO Cups" />
+        </div>
+        <div class="related-card-body">
+          <div class="related-tag">Products</div>
+          <h3>BIO Cups Range — Launching Soon</h3>
+        </div>
+        <div class="related-card-foot">
+          <span class="related-date">15.02.2026</span>
+          <span class="related-read">Read More →</span>
+        </div>
+      </a>
+
+      <a href="propaper.html" class="related-card">
+        <div class="related-card-img">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&fit=crop&q=80" alt="HORECA Expo" />
+        </div>
+        <div class="related-card-body">
+          <div class="related-tag">Event</div>
+          <h3>DivinaECO at ProPaper Dubai</h3>
+        </div>
+        <div class="related-card-foot">
+          <span class="related-date">10.01.2026</span>
+          <span class="related-read">Read More →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer-mini">
+  <p>© 2026 DivinaECO Pack. ALL RIGHTS RESERVED. | <a href="../terms-of-use.html">Terms of Use</a> | <a href="../privacy-policy.html">Privacy Policy</a></p>
+</footer>
+
+
+<!-- ═══ GOOGLE TRANSLATE ═══ -->
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'el,en',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+  function switchLang(lang) {
+    var attempts = 0;
+    function trySwitch() {
+      var sel = document.querySelector('.goog-te-combo');
+      if (sel) {
+        sel.value = lang;
+        sel.dispatchEvent(new Event('change'));
+        // Update button states
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+          btn.classList.toggle('lang-active', btn.getAttribute('data-lang') === lang);
+        });
+        localStorage.setItem('preferred_lang', lang);
+      } else if (attempts < 20) {
+        attempts++;
+        setTimeout(trySwitch, 200);
+      }
+    }
+    trySwitch();
+  }
+  // Restore preferred language on page load
+  window.addEventListener('load', function() {
+    var preferred = localStorage.getItem('preferred_lang');
+    if (preferred && preferred !== 'en') {
+      setTimeout(function() { switchLang(preferred); }, 800);
+    }
+  });
+</script>
+</body>
+</html>

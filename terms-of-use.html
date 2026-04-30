@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use — DivinaECO Pack</title>
+  <meta name="description" content="Read the terms and conditions for using the Divina Eco Pack website and our services.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #3a7d44; --green-dark: #2c5f34; --green-light: #5aaf6a;
+      --gold: #c9a84c; --dark: #1a1a1a; --mid: #4a4a4a;
+      --light: #f5f5f0; --white: #ffffff; --border: #e0ddd5;
+      --font-head: 'Playfair Display', serif; --font-body: 'DM Sans', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--dark); background: var(--white); font-size: 15px; line-height: 1.65; }
+    a { text-decoration: none; color: var(--green); }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+
+    .navbar { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.07); }
+    .navbar-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .nav-logo .logo-text { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--green-dark); }
+    .nav-logo .logo-sub { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); display: block; margin-top: -2px; }
+    .nav-back { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--mid); font-weight: 500; display: flex; align-items: center; gap: 6px; transition: color .2s; text-decoration: none; }
+    .nav-back:hover { color: var(--green); text-decoration: none; }
+    .nav-back svg { width: 14px; height: 14px; }
+
+    .page-hero {
+      background: linear-gradient(135deg, #0c1a0f 0%, #1a3a1e 50%, #2c5f34 100%);
+      padding: 72px 24px 64px;
+      text-align: center;
+    }
+    .page-hero .article-tag { display: inline-block; font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 600; border: 1px solid rgba(201,168,76,.4); padding: 4px 12px; border-radius: 2px; margin-bottom: 20px; }
+    .page-hero h1 { font-family: var(--font-head); font-size: clamp(26px, 4vw, 40px); font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 14px; }
+    .page-hero p { color: rgba(255,255,255,.5); font-size: 13px; }
+
+    .doc-wrap { max-width: 780px; margin: 0 auto; padding: 64px 24px 96px; }
+
+    .doc-meta { background: var(--light); border-left: 3px solid var(--green); border-radius: 0 8px 8px 0; padding: 16px 20px; margin-bottom: 48px; font-size: 13px; color: var(--mid); }
+    .doc-meta strong { color: var(--dark); }
+
+    .doc-wrap h2 { font-family: var(--font-head); font-size: 20px; font-weight: 700; color: var(--dark); margin: 44px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .doc-wrap h2:first-of-type { margin-top: 0; }
+    .doc-wrap p { font-size: 15px; color: var(--mid); line-height: 1.85; margin-bottom: 16px; }
+    .doc-wrap ul { margin: 0 0 16px 20px; }
+    .doc-wrap ul li { font-size: 15px; color: var(--mid); line-height: 1.8; margin-bottom: 8px; }
+    .doc-wrap strong { color: var(--dark); }
+
+    .contact-block { background: var(--light); border-radius: 8px; padding: 24px; margin-top: 16px; font-size: 14px; color: var(--mid); line-height: 1.9; }
+    .contact-block strong { color: var(--dark); display: block; margin-bottom: 4px; }
+
+    .footer-mini { background: var(--dark); padding: 28px 24px; text-align: center; }
+    .footer-mini p { color: #555; font-size: 12px; }
+    .footer-mini a { color: #666; text-decoration: none; }
+
+    @media (max-width: 640px) { .doc-wrap { padding: 40px 20px 72px; } }
+
+  /* ─── LANG TOGGLE ─── */
+  .lang-toggle { display: flex; gap: 4px; align-items: center; }
+  .lang-btn {
+    padding: 3px 9px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    border: 1.5px solid #ccc;
+    border-radius: 3px;
+    background: transparent;
+    color: var(--mid);
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .lang-btn:hover { border-color: var(--green); color: var(--green); }
+  .lang-active { background: var(--green) !important; border-color: var(--green) !important; color: #fff !important; }
+  /* Hide Google Translate bar */
+  .goog-te-banner-frame, .skiptranslate { display: none !important; }
+  body { top: 0 !important; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Home
+    </a>
+    <a href="index.html" class="nav-logo">
+      <span class="logo-text">DivinaECO Pack</span>
+      <span class="logo-sub">Greece</span>
+    </a>
+    <div class="lang-toggle">
+        <button class="lang-btn lang-active" data-lang="en" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" data-lang="el" onclick="switchLang('el')">EL</button>
+      </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <span class="article-tag">Legal</span>
+  <h1>Terms of Use</h1>
+  <p>Last updated: April 2026</p>
+</div>
+
+<div class="doc-wrap">
+
+  <div class="doc-meta">
+    <strong>Please read carefully.</strong> By accessing or using the website <strong>www.divinaeco.gr</strong>, you agree to be bound by these Terms of Use. If you do not agree, please do not use this website.
+  </div>
+
+  <h2>1. About This Website</h2>
+  <p>This website is owned and operated by <strong>DivinaECO Pack</strong> (trading as DivinaEco Pack IKE), a company registered in Greece with offices at 265 Kifisias Avenue, 14561, Kifisia, Athens, Greece, and manufacturing headquarters in Dhule, Maharashtra, India.</p>
+  <p>The website is intended to provide information about our products and services, and to facilitate business enquiries from prospective clients and partners.</p>
+
+  <h2>2. Acceptable Use</h2>
+  <p>You may use this website for lawful purposes only. You agree not to:</p>
+  <ul>
+    <li>Use the website in any way that violates applicable Greek, EU, or international laws or regulations.</li>
+    <li>Transmit any unsolicited or unauthorised advertising or promotional material (spam).</li>
+    <li>Attempt to gain unauthorised access to any part of the website or its underlying systems.</li>
+    <li>Scrape, copy, or reproduce website content — including product descriptions, images, or design elements — without our prior written permission.</li>
+    <li>Use the website to impersonate any person or organisation, or misrepresent your affiliation with any person or organisation.</li>
+    <li>Introduce malicious code, viruses, or any other material that is harmful to our systems or users.</li>
+  </ul>
+
+  <h2>3. Intellectual Property</h2>
+  <p>All content on this website — including but not limited to text, images, logos, product photography, design, and code — is the property of DivinaECO Pack or its licensors and is protected by applicable intellectual property laws.</p>
+  <p>You may view, print, or download content for your own personal, non-commercial reference only. No content may be reproduced, distributed, modified, or used for commercial purposes without our express written consent.</p>
+  <p>The DivinaECO Pack name, logo, and brand identity are trademarks of DivinaECO Pack. Unauthorised use is strictly prohibited.</p>
+
+  <h2>4. Product Information & Accuracy</h2>
+  <p>We make every effort to ensure that product descriptions, specifications, certifications, and pricing information displayed on this website are accurate and up to date. However, we do not warrant that all content is error-free, complete, or current at all times.</p>
+  <p>Product images are for illustrative purposes only. Actual products may vary slightly in appearance. All specifications are subject to change without notice.</p>
+  <p>Nothing on this website constitutes a binding offer or contract. All orders and commercial agreements are subject to separate written confirmation by DivinaECO Pack.</p>
+
+  <h2>5. Contact Form & Enquiries</h2>
+  <p>Submitting an enquiry through our contact form does not create any contractual relationship between you and DivinaECO Pack. We will make reasonable efforts to respond to enquiries within 24 hours during working hours (Mon–Fri, 09:00–18:00 EET).</p>
+  <p>We reserve the right not to respond to enquiries that are abusive, irrelevant, or submitted in bad faith.</p>
+
+  <h2>6. Third-Party Links</h2>
+  <p>This website may contain links to third-party websites (for example, our social media profiles or certification bodies). These links are provided for convenience only. We have no control over the content of those websites and accept no responsibility for them or for any loss or damage that may arise from your use of them.</p>
+
+  <h2>7. Limitation of Liability</h2>
+  <p>To the fullest extent permitted by applicable law, DivinaECO Pack shall not be liable for any indirect, incidental, special, or consequential loss or damage arising from your use of — or inability to use — this website or its content.</p>
+  <p>We do not guarantee that this website will be available at all times, free from errors or interruptions. We reserve the right to suspend, withdraw, or modify the website at any time without notice.</p>
+
+  <h2>8. Privacy & Cookies</h2>
+  <p>Your use of this website is also governed by our <a href="privacy-policy.html">Privacy Policy</a>, which explains how we collect, use, and protect your personal data, and how we use cookies. Please read it carefully.</p>
+
+  <h2>9. Governing Law</h2>
+  <p>These Terms of Use are governed by and construed in accordance with the laws of Greece and the European Union. Any disputes arising from your use of this website shall be subject to the exclusive jurisdiction of the courts of Athens, Greece.</p>
+
+  <h2>10. Changes to These Terms</h2>
+  <p>We may update these Terms of Use from time to time. Any changes will be posted on this page with an updated "Last updated" date. Where changes are material, we will make reasonable efforts to notify users via a notice on our website. We recommend checking this page periodically.</p>
+
+  <h2>11. Contact Us</h2>
+  <p>If you have any questions about these Terms of Use, please contact us:</p>
+  <div class="contact-block">
+    <strong>DivinaECO Pack</strong>
+    Email: <a href="mailto:info@divinaeco.gr">info@divinaeco.gr</a><br>
+    Phone: <a href="tel:+306936790308">+30 693 679 0308</a><br>
+    Address: DivinaEco Pack IKE, 265 Kifisias Avenue, 14561, Kifisia, Athens, Greece
+  </div>
+
+</div>
+
+<footer class="footer-mini">
+  <p>© 2026 DivinaECO Pack. ALL RIGHTS RESERVED. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a></p>
+</footer>
+
+
+<!-- ═══ GOOGLE TRANSLATE ═══ -->
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'el,en',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+  function switchLang(lang) {
+    var attempts = 0;
+    function trySwitch() {
+      var sel = document.querySelector('.goog-te-combo');
+      if (sel) {
+        sel.value = lang;
+        sel.dispatchEvent(new Event('change'));
+        // Update button states
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+          btn.classList.toggle('lang-active', btn.getAttribute('data-lang') === lang);
+        });
+        localStorage.setItem('preferred_lang', lang);
+      } else if (attempts < 20) {
+        attempts++;
+        setTimeout(trySwitch, 200);
+      }
+    }
+    trySwitch();
+  }
+  // Restore preferred language on page load
+  window.addEventListener('load', function() {
+    var preferred = localStorage.getItem('preferred_lang');
+    if (preferred && preferred !== 'en') {
+      setTimeout(function() { switchLang(preferred); }, 800);
+    }
+  });
+</script>
+</body>
+</html>

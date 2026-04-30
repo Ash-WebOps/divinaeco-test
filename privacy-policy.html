@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — DivinaECO Pack</title>
+  <meta name="description" content="Read Divina Eco Pack's privacy policy to understand how we collect, use and protect your personal information.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #3a7d44; --green-dark: #2c5f34; --green-light: #5aaf6a;
+      --gold: #c9a84c; --dark: #1a1a1a; --mid: #4a4a4a;
+      --light: #f5f5f0; --white: #ffffff; --border: #e0ddd5;
+      --font-head: 'Playfair Display', serif; --font-body: 'DM Sans', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--dark); background: var(--white); font-size: 15px; line-height: 1.65; }
+    a { text-decoration: none; color: var(--green); }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+
+    .navbar { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.07); }
+    .navbar-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .nav-logo .logo-text { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--green-dark); }
+    .nav-logo .logo-sub { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); display: block; margin-top: -2px; }
+    .nav-back { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--mid); font-weight: 500; display: flex; align-items: center; gap: 6px; transition: color .2s; text-decoration: none; }
+    .nav-back:hover { color: var(--green); text-decoration: none; }
+    .nav-back svg { width: 14px; height: 14px; }
+
+    /* ─── HERO ─── */
+    .page-hero {
+      background: linear-gradient(135deg, #0c1a0f 0%, #1a3a1e 50%, #2c5f34 100%);
+      padding: 72px 24px 64px;
+      text-align: center;
+    }
+    .page-hero .article-tag { display: inline-block; font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 600; border: 1px solid rgba(201,168,76,.4); padding: 4px 12px; border-radius: 2px; margin-bottom: 20px; }
+    .page-hero h1 { font-family: var(--font-head); font-size: clamp(26px, 4vw, 40px); font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 14px; }
+    .page-hero p { color: rgba(255,255,255,.5); font-size: 13px; }
+
+    /* ─── DOCUMENT BODY ─── */
+    .doc-wrap { max-width: 780px; margin: 0 auto; padding: 64px 24px 96px; }
+
+    .doc-meta {
+      background: var(--light);
+      border-left: 3px solid var(--green);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin-bottom: 48px;
+      font-size: 13px;
+      color: var(--mid);
+    }
+    .doc-meta strong { color: var(--dark); }
+
+    .doc-wrap h2 {
+      font-family: var(--font-head);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 44px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .doc-wrap h2:first-of-type { margin-top: 0; }
+    .doc-wrap p { font-size: 15px; color: var(--mid); line-height: 1.85; margin-bottom: 16px; }
+    .doc-wrap ul { margin: 0 0 16px 20px; }
+    .doc-wrap ul li { font-size: 15px; color: var(--mid); line-height: 1.8; margin-bottom: 8px; }
+    .doc-wrap strong { color: var(--dark); }
+
+    .contact-block {
+      background: var(--light);
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--mid);
+      line-height: 1.9;
+    }
+    .contact-block strong { color: var(--dark); display: block; margin-bottom: 4px; }
+
+    .footer-mini { background: var(--dark); padding: 28px 24px; text-align: center; }
+    .footer-mini p { color: #555; font-size: 12px; }
+    .footer-mini a { color: #666; text-decoration: none; }
+
+    @media (max-width: 640px) { .doc-wrap { padding: 40px 20px 72px; } }
+
+  /* ─── LANG TOGGLE ─── */
+  .lang-toggle { display: flex; gap: 4px; align-items: center; }
+  .lang-btn {
+    padding: 3px 9px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    border: 1.5px solid #ccc;
+    border-radius: 3px;
+    background: transparent;
+    color: var(--mid);
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .lang-btn:hover { border-color: var(--green); color: var(--green); }
+  .lang-active { background: var(--green) !important; border-color: var(--green) !important; color: #fff !important; }
+  /* Hide Google Translate bar */
+  .goog-te-banner-frame, .skiptranslate { display: none !important; }
+  body { top: 0 !important; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Home
+    </a>
+    <a href="index.html" class="nav-logo">
+      <span class="logo-text">DivinaECO Pack</span>
+      <span class="logo-sub">Greece</span>
+    </a>
+    <div class="lang-toggle">
+        <button class="lang-btn lang-active" data-lang="en" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" data-lang="el" onclick="switchLang('el')">EL</button>
+      </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <span class="article-tag">Legal</span>
+  <h1>Privacy Policy</h1>
+  <p>Last updated: April 2026</p>
+</div>
+
+<div class="doc-wrap">
+
+  <div class="doc-meta">
+    <strong>Important:</strong> This policy applies to all personal data collected through the website <strong>www.divinaeco.gr</strong> and any associated contact forms, newsletter subscriptions, or direct communications with DivinaECO Pack.
+  </div>
+
+  <h2>1. Who We Are</h2>
+  <p>This website is operated by <strong>DivinaECO Pack</strong>, an eco-friendly packaging company with operations in Greece and headquarters in Dhule, Maharashtra, India. When we refer to "we", "us" or "our" in this policy, we mean DivinaECO Pack.</p>
+  <p>For any privacy-related enquiries, you can contact us at: <a href="mailto:info@divinaeco.gr">info@divinaeco.gr</a></p>
+
+  <h2>2. What Data We Collect</h2>
+  <p>We may collect the following personal data when you interact with our website:</p>
+  <ul>
+    <li><strong>Contact form submissions:</strong> your name, email address, phone number, company name, and the content of your message.</li>
+    <li><strong>Newsletter subscriptions:</strong> your email address.</li>
+    <li><strong>WhatsApp or direct communications:</strong> your name, phone number, and any information you share with us voluntarily.</li>
+    <li><strong>Website usage data:</strong> pages visited, time spent on site, browser type, and approximate location — collected anonymously via cookies (see Section 7).</li>
+  </ul>
+  <p>We do not collect sensitive personal data (e.g. health data, financial data, or data relating to minors).</p>
+
+  <h2>3. How We Use Your Data</h2>
+  <p>We use the data we collect for the following purposes:</p>
+  <ul>
+    <li>To respond to enquiries submitted through our contact form or via email.</li>
+    <li>To send you our newsletter and product updates, where you have subscribed and given consent.</li>
+    <li>To process quotation requests or sample requests from prospective clients.</li>
+    <li>To improve the performance and content of our website.</li>
+    <li>To comply with our legal obligations.</li>
+  </ul>
+  <p>We will never sell, rent, or trade your personal data to third parties for marketing purposes.</p>
+
+  <h2>4. Legal Basis for Processing (GDPR)</h2>
+  <p>Under the General Data Protection Regulation (EU) 2016/679 (GDPR), we process your personal data on the following legal bases:</p>
+  <ul>
+    <li><strong>Consent</strong> — for newsletter subscriptions and marketing communications. You may withdraw consent at any time.</li>
+    <li><strong>Legitimate interest</strong> — for responding to business enquiries and improving our website.</li>
+    <li><strong>Legal obligation</strong> — where we are required to retain data for tax, accounting, or regulatory purposes.</li>
+  </ul>
+
+  <h2>5. How Long We Keep Your Data</h2>
+  <p>We retain personal data only for as long as necessary for the purpose it was collected:</p>
+  <ul>
+    <li>Contact form and enquiry data: up to <strong>3 years</strong> from last contact, unless a business relationship continues.</li>
+    <li>Newsletter subscriber data: until you unsubscribe.</li>
+    <li>Legal and accounting records: as required by Greek and EU law (typically 5–10 years).</li>
+  </ul>
+
+  <h2>6. Your Rights Under GDPR</h2>
+  <p>If you are located in the European Union, you have the following rights regarding your personal data:</p>
+  <ul>
+    <li><strong>Right of access</strong> — you can request a copy of the data we hold about you.</li>
+    <li><strong>Right to rectification</strong> — you can ask us to correct inaccurate data.</li>
+    <li><strong>Right to erasure</strong> — you can ask us to delete your data ("right to be forgotten").</li>
+    <li><strong>Right to restriction</strong> — you can ask us to limit how we use your data.</li>
+    <li><strong>Right to data portability</strong> — you can request your data in a structured, machine-readable format.</li>
+    <li><strong>Right to object</strong> — you can object to processing based on legitimate interest or for direct marketing.</li>
+    <li><strong>Right to withdraw consent</strong> — where processing is based on consent, you may withdraw it at any time without affecting prior processing.</li>
+  </ul>
+  <p>To exercise any of these rights, please contact us at <a href="mailto:info@divinaeco.gr">info@divinaeco.gr</a>. We will respond within 30 days.</p>
+  <p>You also have the right to lodge a complaint with the <strong>Hellenic Data Protection Authority (HDPA)</strong> at <a href="https://www.dpa.gr" target="_blank">www.dpa.gr</a>.</p>
+
+  <h2>7. Cookies</h2>
+  <p>Our website uses cookies — small text files stored on your device — to help us understand how visitors use the site and to improve your browsing experience. We use:</p>
+  <ul>
+    <li><strong>Essential cookies:</strong> necessary for the website to function. These cannot be disabled.</li>
+    <li><strong>Analytics cookies:</strong> anonymous data on how pages are used (e.g. Google Analytics), to help us improve content. You may opt out via your browser settings.</li>
+  </ul>
+  <p>You can control and delete cookies through your browser settings at any time. Disabling cookies may affect the functionality of some parts of the website.</p>
+
+  <h2>8. Third-Party Services</h2>
+  <p>We may use the following third-party services which may process data on our behalf:</p>
+  <ul>
+    <li><strong>Google Analytics</strong> — anonymous website usage statistics. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</li>
+    <li><strong>WhatsApp Business</strong> — for direct customer communications. Governed by Meta's privacy policy.</li>
+    <li><strong>Email hosting providers</strong> — for storing and transmitting email communications.</li>
+  </ul>
+  <p>All third-party processors are required to handle your data in accordance with GDPR.</p>
+
+  <h2>9. Data Security</h2>
+  <p>We take reasonable technical and organisational measures to protect your personal data against unauthorised access, loss, or disclosure. Our website uses HTTPS encryption for all data transmitted between your browser and our server.</p>
+  <p>No method of transmission over the internet is 100% secure. In the unlikely event of a data breach that affects your rights, we will notify you and the relevant supervisory authority as required by law.</p>
+
+  <h2>10. International Data Transfers</h2>
+  <p>As DivinaECO Pack operates across Greece and India, some data may be processed or stored outside the European Economic Area (EEA). Where this occurs, we ensure appropriate safeguards are in place in accordance with GDPR requirements.</p>
+
+  <h2>11. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal obligations. The "Last updated" date at the top of this page will always reflect the most recent revision. Where changes are material, we will make reasonable efforts to notify you — for example by displaying a notice on our website. Your continued use of the site does not constitute acceptance of updated terms; where required by law, we will seek fresh consent.</p>
+
+  <h2>12. Contact Us</h2>
+  <p>For any questions, requests, or concerns regarding this Privacy Policy or how we handle your personal data, please contact us:</p>
+  <div class="contact-block">
+    <strong>DivinaECO Pack — Data Contact</strong>
+    Email: <a href="mailto:info@divinaeco.gr">info@divinaeco.gr</a><br>
+    Phone: <a href="tel:+306936790308">+30 693 679 0308</a><br>
+    Address: DivinaEco Pack IKE, 265 Kifisias avenue, 14561, kifisia, Athens, Greece
+  </div>
+
+</div>
+
+<footer class="footer-mini">
+  <p>© 2026 DivinaECO Pack. ALL RIGHTS RESERVED. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a></p>
+</footer>
+
+
+<!-- ═══ GOOGLE TRANSLATE ═══ -->
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'el,en',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+  function switchLang(lang) {
+    var attempts = 0;
+    function trySwitch() {
+      var sel = document.querySelector('.goog-te-combo');
+      if (sel) {
+        sel.value = lang;
+        sel.dispatchEvent(new Event('change'));
+        // Update button states
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+          btn.classList.toggle('lang-active', btn.getAttribute('data-lang') === lang);
+        });
+        localStorage.setItem('preferred_lang', lang);
+      } else if (attempts < 20) {
+        attempts++;
+        setTimeout(trySwitch, 200);
+      }
+    }
+    trySwitch();
+  }
+  // Restore preferred language on page load
+  window.addEventListener('load', function() {
+    var preferred = localStorage.getItem('preferred_lang');
+    if (preferred && preferred !== 'en') {
+      setTimeout(function() { switchLang(preferred); }, 800);
+    }
+  });
+</script>
+</body>
+</html>

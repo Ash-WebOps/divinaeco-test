@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications — DivinaECO Pack</title>
+  <meta name="description" content="View Divina Eco Pack's official certifications and quality standards for our eco-friendly packaging products.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #3a7d44; --green-dark: #2c5f34; --green-light: #5aaf6a;
+      --gold: #c9a84c; --dark: #1a1a1a; --mid: #4a4a4a;
+      --light: #f5f5f0; --white: #ffffff; --border: #e0ddd5;
+      --font-head: 'Playfair Display', serif; --font-body: 'DM Sans', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--dark); background: var(--white); font-size: 15px; line-height: 1.65; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .navbar { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.07); }
+    .navbar-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .nav-logo .logo-text { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--green-dark); }
+    .nav-logo .logo-sub { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); display: block; margin-top: -2px; }
+    .nav-back { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--mid); font-weight: 500; display: flex; align-items: center; gap: 6px; transition: color .2s; }
+    .nav-back:hover { color: var(--green); }
+    .nav-back svg { width: 14px; height: 14px; }
+
+    /* ─── HERO ─── */
+    .page-hero {
+      background: linear-gradient(135deg, #0c1a0f 0%, #1a3a1e 50%, #2c5f34 100%);
+      padding: 80px 24px 72px;
+      text-align: center;
+    }
+    .page-hero .article-tag { display: inline-block; font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 600; border: 1px solid rgba(201,168,76,.4); padding: 4px 12px; border-radius: 2px; margin-bottom: 20px; }
+    .page-hero h1 { font-family: var(--font-head); font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 16px; }
+    .page-hero p { color: rgba(255,255,255,.55); font-size: 15px; max-width: 520px; margin: 0 auto; line-height: 1.75; }
+
+    /* ─── COMING SOON BLOCK ─── */
+    .page-wrap { max-width: 780px; margin: 0 auto; padding: 64px 24px 80px; }
+
+    .coming-soon-card {
+      background: var(--light);
+      border-radius: 12px;
+      padding: 56px 40px;
+      text-align: center;
+      border: 1px solid var(--border);
+      margin-bottom: 48px;
+    }
+    .coming-soon-icon {
+      width: 72px; height: 72px;
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 24px;
+    }
+    .coming-soon-card h2 { font-family: var(--font-head); font-size: 26px; font-weight: 700; color: var(--dark); margin-bottom: 14px; }
+    .coming-soon-card p { font-size: 15px; color: var(--mid); line-height: 1.8; max-width: 500px; margin: 0 auto; }
+
+    .status-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 28px;
+    }
+    .status-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--gold);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; } 50% { opacity: .35; }
+    }
+
+    /* ─── CERT PREVIEW LIST ─── */
+    .cert-list { display: flex; flex-direction: column; gap: 12px; margin-top: 40px; }
+    .cert-row-item {
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+    .cert-row-left { display: flex; align-items: center; gap: 14px; }
+    .cert-icon { font-size: 20px; }
+    .cert-name { font-size: 14px; font-weight: 600; color: var(--dark); }
+    .cert-desc { font-size: 12px; color: var(--mid); margin-top: 2px; }
+    .cert-status {
+      font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+      font-weight: 600; color: var(--gold);
+      background: rgba(201,168,76,.1);
+      border: 1px solid rgba(201,168,76,.3);
+      border-radius: 4px;
+      padding: 3px 10px;
+      white-space: nowrap;
+    }
+
+    /* ─── CTA ─── */
+    .article-cta { background: var(--dark); border-radius: 12px; padding: 40px; text-align: center; margin-top: 48px; }
+    .article-cta h3 { font-family: var(--font-head); font-size: 22px; color: #fff; margin-bottom: 10px; }
+    .article-cta p { color: rgba(255,255,255,.5); font-size: 14px; margin-bottom: 22px; }
+    .btn-green { display: inline-block; padding: 13px 32px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; border-radius: 2px; background: var(--green); color: #fff; transition: background .2s; }
+    .btn-green:hover { background: var(--green-dark); }
+
+    .footer-mini { background: var(--dark); padding: 28px 24px; text-align: center; }
+    .footer-mini p { color: #555; font-size: 12px; }
+    .footer-mini a { color: #666; }
+
+    @media (max-width: 640px) {
+      .coming-soon-card { padding: 36px 24px; }
+      .cert-row-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+    }
+
+  /* ─── LANG TOGGLE ─── */
+  .lang-toggle { display: flex; gap: 4px; align-items: center; }
+  .lang-btn {
+    padding: 3px 9px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    border: 1.5px solid #ccc;
+    border-radius: 3px;
+    background: transparent;
+    color: var(--mid);
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .lang-btn:hover { border-color: var(--green); color: var(--green); }
+  .lang-active { background: var(--green) !important; border-color: var(--green) !important; color: #fff !important; }
+  /* Hide Google Translate bar */
+  .goog-te-banner-frame, .skiptranslate { display: none !important; }
+  body { top: 0 !important; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Home
+    </a>
+    <a href="index.html" class="nav-logo">
+      <span class="logo-text">DivinaECO Pack</span>
+      <span class="logo-sub">Greece</span>
+    </a>
+    <div class="lang-toggle">
+        <button class="lang-btn lang-active" data-lang="en" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" data-lang="el" onclick="switchLang('el')">EL</button>
+      </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <span class="article-tag">Certifications</span>
+  <h1>Our Certifications &amp; Standards</h1>
+  <p>We are committed to full transparency on our environmental and quality credentials. Documentation is currently being compiled.</p>
+</div>
+
+<div class="page-wrap">
+
+  <div class="coming-soon-card">
+    <div class="coming-soon-icon">📋</div>
+    <div class="status-badge"><span class="status-dot"></span> In Progress</div>
+    <h2>This page is under preparation</h2>
+    <p>We are currently gathering and verifying our full certification documentation. All certificates will be published here shortly — including third-party audit reports, compostability certifications, and quality management accreditations.</p>
+  </div>
+
+  <div class="cert-list">
+
+    <div class="cert-row-item">
+      <div class="cert-row-left">
+        <span class="cert-icon">🌿</span>
+        <div>
+          <div class="cert-name">FSC® Certified</div>
+          <div class="cert-desc">Forest Stewardship Council — responsible sourcing of paper and board materials</div>
+        </div>
+      </div>
+      <span class="cert-status">Coming Soon</span>
+    </div>
+
+    <div class="cert-row-item">
+      <div class="cert-row-left">
+        <span class="cert-icon">♻️</span>
+        <div>
+          <div class="cert-name">EN 13432 — Industrial Compostable</div>
+          <div class="cert-desc">European standard for packaging recoverable through composting and biodegradation</div>
+        </div>
+      </div>
+      <span class="cert-status">Coming Soon</span>
+    </div>
+
+    <div class="cert-row-item">
+      <div class="cert-row-left">
+        <span class="cert-icon">🏡</span>
+        <div>
+          <div class="cert-name">OK Compost Home</div>
+          <div class="cert-desc">Certified to break down in home composting conditions within 12 weeks</div>
+        </div>
+      </div>
+      <span class="cert-status">Coming Soon</span>
+    </div>
+
+    <div class="cert-row-item">
+      <div class="cert-row-left">
+        <span class="cert-icon">✅</span>
+        <div>
+          <div class="cert-name">ISO 9001 — Quality Management</div>
+          <div class="cert-desc">International standard for consistent quality management systems</div>
+        </div>
+      </div>
+      <span class="cert-status">Coming Soon</span>
+    </div>
+
+    <div class="cert-row-item">
+      <div class="cert-row-left">
+        <span class="cert-icon">🧪</span>
+        <div>
+          <div class="cert-name">REACH Compliant</div>
+          <div class="cert-desc">EU regulation on chemicals — no restricted substances in our products</div>
+        </div>
+      </div>
+      <span class="cert-status">Coming Soon</span>
+    </div>
+
+  </div>
+
+  <div class="article-cta">
+    <h3>Questions about our certifications?</h3>
+    <p>Our team is happy to share available documentation directly on request.</p>
+    <a href="index.html#contact" class="btn-green">Contact Us</a>
+  </div>
+
+</div>
+
+<footer class="footer-mini">
+  <p>© 2026 DivinaECO Pack. ALL RIGHTS RESERVED. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a></p>
+</footer>
+
+
+<!-- ═══ GOOGLE TRANSLATE ═══ -->
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'el,en',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+  function switchLang(lang) {
+    var attempts = 0;
+    function trySwitch() {
+      var sel = document.querySelector('.goog-te-combo');
+      if (sel) {
+        sel.value = lang;
+        sel.dispatchEvent(new Event('change'));
+        // Update button states
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+          btn.classList.toggle('lang-active', btn.getAttribute('data-lang') === lang);
+        });
+        localStorage.setItem('preferred_lang', lang);
+      } else if (attempts < 20) {
+        attempts++;
+        setTimeout(trySwitch, 200);
+      }
+    }
+    trySwitch();
+  }
+  // Restore preferred language on page load
+  window.addEventListener('load', function() {
+    var preferred = localStorage.getItem('preferred_lang');
+    if (preferred && preferred !== 'en') {
+      setTimeout(function() { switchLang(preferred); }, 800);
+    }
+  });
+</script>
+</body>
+</html>
