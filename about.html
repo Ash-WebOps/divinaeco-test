@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — DivinaECO Pack Greece</title>
+  <meta name="description" content="Discover the story behind DivinaECO Pack Greece — 35 years of manufacturing excellence, in-house production, and the vision of our founding partners.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #3a7d44; --green-dark: #2c5f34; --green-light: #5aaf6a;
+      --gold: #c9a84c; --dark: #1a1a1a; --dark-bg: #0e1a11;
+      --mid: #555; --light: #f7f7f2; --white: #fff; --border: #e2dfd7;
+      --font-head: 'Playfair Display', serif; --font-body: 'DM Sans', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--dark); background: var(--white); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    /* ── NAVBAR ── */
+    .navbar { background:#fff; border-bottom:1px solid var(--border); position:sticky; top:0; z-index:200; box-shadow:0 2px 16px rgba(0,0,0,.06); }
+    .nb { max-width:1200px; margin:0 auto; padding:0 48px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; height:72px; }
+    .nav-back { display:inline-flex; align-items:center; gap:7px; font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#777; transition:color .2s; }
+    .nav-back:hover { color:var(--green); }
+    .nav-back svg { width:13px; height:13px; }
+    .nav-logo { text-align:center; }
+    .nav-logo .lt { font-family:var(--font-head); font-size:21px; font-weight:700; color:var(--green-dark); display:block; }
+    .nav-logo .ls { font-size:8px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); display:block; margin-top:-1px; }
+    .nav-right { display:flex; align-items:center; gap:22px; justify-content:flex-end; }
+    .ni { font-size:11px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; color:var(--dark); padding:6px 2px; position:relative; transition:color .2s; }
+    .ni::after { content:''; position:absolute; bottom:0; left:50%; right:50%; height:2px; background:var(--green); transition:.25s; }
+    .ni:hover { color:var(--green); }
+    .ni:hover::after { left:0; right:0; }
+    .lang-toggle { display:flex; gap:4px; }
+    .lang-btn { padding:3px 9px; font-size:10px; font-weight:700; letter-spacing:1px; text-transform:uppercase; border:1.5px solid #ccc; border-radius:3px; background:transparent; color:#777; cursor:pointer; transition:all .2s; }
+    .lang-btn:hover { border-color:var(--green); color:var(--green); }
+    .lang-active { background:var(--green)!important; border-color:var(--green)!important; color:#fff!important; }
+
+    /* ── HERO ── */
+    .hero { height:580px; position:relative; overflow:hidden; background:var(--dark-bg); display:flex; align-items:flex-end; }
+    .hero img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 35%; filter:brightness(.4) saturate(.75); }
+    .hero-layer { position:absolute; inset:0; background:linear-gradient(to top, rgba(10,22,13,.95) 0%, rgba(10,22,13,.35) 55%, transparent 100%); }
+    .hero-body { position:relative; z-index:2; max-width:1200px; margin:0 auto; padding:0 48px 72px; width:100%; }
+    .hero-crumb { display:flex; align-items:center; gap:8px; font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:rgba(255,255,255,.3); margin-bottom:22px; }
+    .hero-crumb span { color:var(--gold); }
+    .hero-crumb svg { width:10px; height:10px; opacity:.35; }
+    .hero h1 { font-family:var(--font-head); font-size:clamp(36px,5vw,58px); font-weight:700; color:#fff; line-height:1.08; max-width:640px; margin-bottom:22px; }
+    .hero h1 em { font-style:italic; color:var(--gold); }
+    .hero-sub { font-size:15px; color:rgba(255,255,255,.5); max-width:480px; line-height:1.78; padding-left:16px; border-left:2px solid var(--green-light); }
+
+    /* ── STAT ROW ── */
+    .stat-row { background:var(--green-dark); }
+    .sr { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); }
+    .stat { padding:28px 0; text-align:center; border-right:1px solid rgba(255,255,255,.1); }
+    .stat:last-child { border-right:none; }
+    .stat-n { font-family:var(--font-head); font-size:38px; font-weight:700; color:var(--gold); line-height:1; display:flex; align-items:baseline; justify-content:center; gap:2px; }
+    .stat-n sup { font-size:17px; }
+    .stat-l { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.42); margin-top:5px; }
+
+    /* ── LAYOUT HELPERS ── */
+    .w { max-width:1200px; margin:0 auto; padding:0 48px; }
+    section { padding:96px 0; }
+    .lbl { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--green); font-weight:700; margin-bottom:12px; }
+    .hdg { font-family:var(--font-head); font-size:clamp(26px,3.5vw,40px); font-weight:700; color:var(--dark); line-height:1.15; }
+    .bar { width:44px; height:3px; background:var(--green); margin:18px 0 28px; }
+    .btn { display:inline-block; padding:13px 30px; font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; border-radius:2px; cursor:pointer; transition:.2s; }
+    .btn-g { background:var(--green); color:#fff; }
+    .btn-g:hover { background:var(--green-dark); }
+    .btn-o { border:2px solid var(--green); color:var(--green); }
+    .btn-o:hover { background:var(--green); color:#fff; }
+
+    /* ── WHO WE ARE ── */
+    .sec-who { background:var(--light); }
+    .who-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+    .who-img { position:relative; }
+    .who-img-frame { width:100%; height:460px; border-radius:3px; overflow:hidden; box-shadow:0 28px 72px rgba(0,0,0,.13); }
+    .who-img-frame img { width:100%; height:100%; object-fit:cover; }
+    .who-badge { position:absolute; bottom:-28px; right:-24px; background:var(--dark-bg); border-radius:3px; padding:22px 28px; box-shadow:0 16px 48px rgba(0,0,0,.4); text-align:center; min-width:136px; }
+    .who-badge-yr { font-family:var(--font-head); font-size:42px; font-weight:700; color:var(--gold); line-height:1; }
+    .who-badge-sub { font-size:9px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.45); margin-top:4px; }
+    .body-text p { font-size:15px; color:var(--mid); line-height:1.82; margin-bottom:16px; }
+    .body-text p.lead { font-size:16px; color:var(--dark); font-weight:400; border-left:3px solid var(--green); padding-left:18px; margin-bottom:24px; line-height:1.75; }
+    .btn-row { display:flex; gap:12px; margin-top:30px; flex-wrap:wrap; }
+
+    /* ── JOURNEY ── */
+    .sec-journey { background:var(--dark-bg); padding:96px 0; }
+    .jhead { text-align:center; margin-bottom:64px; }
+    .jhead .lbl { color:var(--gold); }
+    .jhead .hdg { color:#fff; }
+    .jhead .bar { background:var(--gold); margin:18px auto 22px; }
+    .jhead p { font-size:15px; color:rgba(255,255,255,.42); max-width:480px; margin:0 auto; line-height:1.78; }
+    .jgrid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.07); }
+    .jblock { background:var(--dark-bg); padding:44px 48px; position:relative; transition:background .3s; }
+    .jblock:hover { background:rgba(255,255,255,.022); }
+    .jblock-yr { font-family:var(--font-head); font-size:48px; font-weight:700; color:rgba(255,255,255,.03); line-height:1; position:absolute; bottom:20px; right:28px; pointer-events:none; user-select:none; letter-spacing:-1px; }
+    .jblock-label { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:14px; display:flex; align-items:center; gap:10px; }
+    .jblock-label::before { content:''; display:inline-block; width:24px; height:1px; background:var(--gold); }
+    .jblock h3 { font-family:var(--font-head); font-size:19px; font-weight:700; color:#fff; line-height:1.25; margin-bottom:14px; }
+    .jblock p { font-size:14px; color:rgba(255,255,255,.48); line-height:1.82; margin:0; }
+    /* Present — full width */
+    .jblock.present { grid-column:1/-1; display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; border-top:1px solid rgba(201,168,76,.18); background:rgba(201,168,76,.025); }
+    .jblock.present:hover { background:rgba(201,168,76,.045); }
+    .jblock.present h3 { font-size:24px; }
+    .jblock.present p { font-size:14px; color:rgba(255,255,255,.58); }
+    .p-aside { padding-left:48px; border-left:1px solid rgba(201,168,76,.18); }
+    .p-aside blockquote { font-family:var(--font-head); font-style:italic; font-size:17px; color:rgba(255,255,255,.68); line-height:1.65; border-left:3px solid var(--gold); padding-left:20px; margin-bottom:22px; }
+    .cert-pills { display:flex; gap:8px; flex-wrap:wrap; }
+    .cpill { display:inline-flex; align-items:center; gap:6px; padding:5px 13px; border:1px solid rgba(255,255,255,.1); border-radius:20px; font-size:10px; font-weight:700; letter-spacing:.8px; color:rgba(255,255,255,.45); }
+    .cpill::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--green-light); flex-shrink:0; }
+
+    /* ── MANUFACTURING ── */
+    .sec-mfg { background:var(--white); }
+    .mfg-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; margin-bottom:56px; }
+    .mfg-img-wrap { height:460px; border-radius:3px; overflow:hidden; box-shadow:0 24px 64px rgba(0,0,0,.11); position:relative; }
+    .mfg-img-wrap img { width:100%; height:100%; object-fit:cover; }
+    .mfg-img-wrap::after { content:''; position:absolute; inset:0; background:linear-gradient(to top, rgba(10,22,13,.68) 0%, transparent 55%); }
+    .mfg-caption { position:absolute; bottom:22px; left:24px; z-index:2; color:#fff; }
+    .mfg-caption strong { font-family:var(--font-head); font-size:16px; display:block; }
+    .mfg-caption span { font-size:9.5px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); }
+    .cap-list { list-style:none; margin-top:8px; }
+    .cap-list li { display:flex; align-items:flex-start; gap:14px; padding:12px 0; border-bottom:1px solid var(--border); font-size:14px; color:var(--mid); line-height:1.65; }
+    .cap-list li:last-child { border-bottom:none; }
+    .cap-dot { width:6px; height:6px; border-radius:50%; background:var(--green); flex-shrink:0; margin-top:7px; }
+    .cap-list strong { color:var(--dark); font-weight:600; }
+    .mfg-tiles { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:3px; overflow:hidden; }
+    .mtile { background:var(--white); padding:28px; transition:background .25s; }
+    .mtile:hover { background:var(--light); }
+    .mtile-ico { font-size:22px; margin-bottom:12px; }
+    .mtile h4 { font-family:var(--font-head); font-size:14px; font-weight:700; color:var(--dark); margin-bottom:6px; }
+    .mtile p { font-size:12px; color:var(--mid); line-height:1.6; margin:0; }
+
+    /* ── VALUES ── */
+    .sec-values { background:var(--light); }
+    .values-head { margin-bottom:48px; }
+    .values-head .sub { font-size:15px; color:var(--mid); line-height:1.78; max-width:560px; margin-top:0; }
+    .vgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:3px; overflow:hidden; }
+    .vcard { background:var(--white); padding:36px 30px; position:relative; transition:background .25s; }
+    .vcard:hover { background:var(--light); }
+    .vcard::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--green); transform:scaleX(0); transform-origin:left; transition:transform .35s; }
+    .vcard:hover::before { transform:scaleX(1); }
+    .vcard-ico { font-size:24px; margin-bottom:14px; }
+    .vcard h3 { font-family:var(--font-head); font-size:16px; font-weight:700; color:var(--dark); margin-bottom:10px; }
+    .vcard p { font-size:13px; color:var(--mid); line-height:1.75; margin:0; }
+
+    /* ── PARTNERS ── */
+    .sec-partners { background:var(--dark-bg); }
+    .phead { text-align:center; margin-bottom:64px; }
+    .phead .lbl { color:var(--gold); }
+    .phead .hdg { color:#fff; }
+    .phead .bar { background:var(--gold); margin:18px auto 22px; }
+    .phead p { font-size:15px; color:rgba(255,255,255,.4); max-width:460px; margin:0 auto; line-height:1.78; }
+    .pgrid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+    .pcard { background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.07); border-radius:3px; overflow:hidden; position:relative; transition:border-color .3s,box-shadow .3s; }
+    .pcard:hover { border-color:rgba(201,168,76,.25); box-shadow:0 20px 56px rgba(0,0,0,.45); }
+    .ptopbar { height:3px; background:linear-gradient(to right,var(--green),var(--gold)); }
+    .pcard-head { padding:38px 38px 30px; display:flex; gap:22px; align-items:center; }
+    .pmon { width:84px; height:84px; border-radius:50%; background:linear-gradient(135deg,#0e2614 0%,#1a3a1e 100%); border:2px solid rgba(201,168,76,.35); display:flex; align-items:center; justify-content:center; flex-shrink:0; box-shadow:0 8px 28px rgba(0,0,0,.4); }
+    .pmon span { font-family:var(--font-head); font-size:26px; font-weight:700; color:var(--gold); }
+    .pname { font-family:var(--font-head); font-size:21px; font-weight:700; color:#fff; line-height:1.15; margin-bottom:4px; }
+    .prole { font-size:9px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); font-weight:700; }
+    .ptag { display:inline-block; margin-top:8px; font-size:9px; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,.28); border:1px solid rgba(255,255,255,.1); border-radius:20px; padding:3px 11px; }
+    .psep { height:1px; background:rgba(255,255,255,.06); margin:0 38px; }
+    .pcard-body { padding:28px 38px 36px; }
+    .pcard-body p { font-size:14px; color:rgba(255,255,255,.48); line-height:1.82; margin-bottom:14px; }
+    .pquote { border-left:3px solid var(--gold); padding-left:18px; font-family:var(--font-head); font-style:italic; font-size:15px; color:rgba(255,255,255,.7); line-height:1.65; margin:22px 0; }
+    .plinks { display:flex; gap:8px; flex-wrap:wrap; }
+    .plink { display:inline-flex; align-items:center; gap:6px; padding:7px 14px; font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; border:1px solid rgba(255,255,255,.1); border-radius:2px; color:rgba(255,255,255,.38); transition:.2s; }
+    .plink:hover { color:var(--gold); border-color:rgba(201,168,76,.35); background:rgba(201,168,76,.05); }
+    .plink svg { width:12px; height:12px; }
+
+    /* ── CERT BAND ── */
+    .cert-band { background:var(--green-dark); padding:36px 0; }
+    .cinner { max-width:1200px; margin:0 auto; padding:0 48px; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; }
+    .cinner h3 { font-family:var(--font-head); font-size:19px; font-weight:700; color:#fff; }
+    .cinner p { font-size:12px; color:rgba(255,255,255,.42); margin-top:3px; }
+    .cbadges { display:flex; gap:8px; flex-wrap:wrap; }
+    .cbadge { display:flex; align-items:center; gap:7px; padding:8px 15px; border:1px solid rgba(255,255,255,.14); border-radius:2px; font-size:11px; font-weight:600; letter-spacing:.4px; color:rgba(255,255,255,.72); background:rgba(255,255,255,.03); }
+    .cbadge .dot { width:6px; height:6px; border-radius:50%; background:var(--green-light); flex-shrink:0; }
+
+    /* ── CTA ── */
+    .sec-cta { background:var(--dark-bg); }
+    .cta-box { max-width:680px; margin:0 auto; text-align:center; }
+    .cta-box .lbl { color:var(--gold); }
+    .cta-box .hdg { color:#fff; margin-top:10px; }
+    .cta-box .bar { background:var(--gold); margin:18px auto 24px; }
+    .cta-box p { color:rgba(255,255,255,.45); font-size:15px; line-height:1.8; margin-bottom:36px; }
+    .cta-btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+    .btn-gld { background:var(--gold); color:var(--dark); font-weight:700; }
+    .btn-gld:hover { background:#b8963e; }
+    .btn-ow { border:2px solid rgba(255,255,255,.2); color:#fff; }
+    .btn-ow:hover { border-color:#fff; background:rgba(255,255,255,.07); }
+
+    /* ── FOOTER ── */
+    footer { background:#111; padding-top:56px; }
+    .fgrid { max-width:1200px; margin:0 auto; padding:0 48px 48px; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; }
+    .fbrand .lt { font-family:var(--font-head); font-size:19px; font-weight:700; color:var(--green-light); display:block; }
+    .fbrand .ls { font-size:8px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:13px; }
+    .fbrand p { font-size:13px; color:#555; line-height:1.7; max-width:240px; }
+    .socials { display:flex; gap:9px; margin-top:18px; }
+    .slink { width:33px; height:33px; border-radius:50%; border:1px solid #2a2a2a; display:flex; align-items:center; justify-content:center; color:#555; transition:.2s; }
+    .slink:hover { border-color:var(--green); color:var(--green-light); }
+    footer h4 { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#666; margin-bottom:14px; font-weight:700; }
+    footer ul { list-style:none; }
+    footer ul li { margin-bottom:9px; }
+    footer ul li a { font-size:13px; color:#444; transition:color .2s; }
+    footer ul li a:hover { color:var(--green-light); }
+    .fbtm { max-width:1200px; margin:0 auto; padding:18px 48px; border-top:1px solid #1e1e1e; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+    .fbtm p { font-size:11px; color:#333; letter-spacing:.3px; }
+    .fbtm a { color:#444; }
+    .btop { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#333; cursor:pointer; transition:.2s; }
+    .btop:hover { color:var(--green-light); }
+
+    /* ── REVEAL ── */
+    .rv { opacity:0; transform:translateY(20px); transition:opacity .65s ease,transform .65s ease; }
+    .rv.in { opacity:1; transform:translateY(0); }
+    .rv.d1 { transition-delay:.1s; }
+    .rv.d2 { transition-delay:.2s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width:960px) {
+      .nb { padding:0 24px; }
+      .who-grid,.mfg-grid { grid-template-columns:1fr; gap:48px; }
+      .who-img { margin-bottom:40px; }
+      .who-badge { bottom:-18px; right:-10px; }
+      .pgrid { grid-template-columns:1fr; }
+      .sr { grid-template-columns:repeat(2,1fr); }
+      .vgrid { grid-template-columns:1fr 1fr; }
+      .mfg-tiles { grid-template-columns:1fr 1fr; }
+      .jgrid { grid-template-columns:1fr; }
+      .jblock.present { grid-template-columns:1fr; }
+      .p-aside { border-left:none; padding-left:0; border-top:1px solid rgba(201,168,76,.18); padding-top:28px; }
+      .fgrid { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width:600px) {
+      .hero { height:460px; }
+      .hero-body,.w,.cta-box { padding-left:20px; padding-right:20px; }
+      .stat-n { font-size:28px; }
+      .stat { padding:18px 10px; }
+      .vgrid,.mfg-tiles { grid-template-columns:1fr; }
+      .pcard-head { padding:24px 22px 18px; gap:16px; }
+      .psep { margin:0 22px; }
+      .pcard-body { padding:22px 22px 28px; }
+      .fgrid { grid-template-columns:1fr; padding:0 20px 40px; }
+      .fbtm,.cinner { padding:18px 20px; }
+    }
+    .goog-te-banner-frame,.skiptranslate { display:none!important; }
+    body { top:0!important; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nb">
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Home
+    </a>
+    <a href="index.html" class="nav-logo">
+      <span class="lt">DivinaECO Pack</span>
+      <span class="ls">Greece</span>
+    </a>
+    <div class="nav-right">
+      <a href="index.html#categories" class="ni">Products</a>
+      <a href="index.html#contact" class="ni">Contact</a>
+      <div class="lang-toggle">
+        <button class="lang-btn lang-active" data-lang="en" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" data-lang="el" onclick="switchLang('el')">EL</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1565793979405-4b82a03c4df6?w=1600&fit=crop&q=80"
+       onerror="this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1600&fit=crop&q=80'"
+       alt="DivinaECO Pack Manufacturing Facility" />
+  <div class="hero-layer"></div>
+  <div class="hero-body">
+    <div class="hero-crumb">
+      Home
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <span>About Us</span>
+    </div>
+    <h1>Built on <em>Craft,</em><br>Driven by Purpose</h1>
+    <p class="hero-sub">35 years of manufacturing expertise, 100% in-house production, and a commitment to sustainable packaging that never wavers.</p>
+  </div>
+</div>
+
+<!-- STAT ROW -->
+<div class="stat-row">
+  <div class="sr">
+    <div class="stat"><div class="stat-n">35<sup>+</sup></div><div class="stat-l">Years Manufacturing</div></div>
+    <div class="stat"><div class="stat-n">100<sup>+</sup></div><div class="stat-l">Satisfied Clients</div></div>
+    <div class="stat"><div class="stat-n">3<sup>+</sup></div><div class="stat-l">Continents Served</div></div>
+    <div class="stat"><div class="stat-n">100<sup>%</sup></div><div class="stat-l">In-House Production</div></div>
+  </div>
+</div>
+
+<!-- WHO WE ARE -->
+<section class="sec-who">
+  <div class="w">
+    <div class="who-grid">
+      <div class="who-img rv">
+        <div class="who-img-frame">
+          <img src="images/factory/factory-4.jpg"
+               onerror="this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&fit=crop&q=80'"
+               alt="DivinaECO Pack Facility" />
+        </div>
+        <div class="who-badge">
+          <div class="who-badge-yr">1992</div>
+          <div class="who-badge-sub">Founded</div>
+        </div>
+      </div>
+      <div class="rv d1">
+        <p class="lbl">About DivinaECO Pack</p>
+        <h2 class="hdg">Who We Are</h2>
+        <div class="bar"></div>
+        <div class="body-text">
+          <p class="lead">DivinaECO Pack IKE is a premium eco-friendly packaging company in Greece, backed by over three decades of continuous manufacturing heritage.</p>
+          <p>We operate at the intersection of environmental responsibility and product excellence. Every cup, lid and sleeve we produce carries a clear declaration: that commercial success and ecological care are not in competition — they belong together.</p>
+          <p>Serving cafes, restaurants, hotels, airlines, HORECA chains and FMCG brands, we bring the scale and consistency of a global manufacturer together with the responsiveness of a dedicated local partner — based in Kifisia, Athens, always within reach.</p>
+          <p>Our vertically integrated model means that from raw material procurement to quality-controlled dispatch, every stage happens under our direct supervision. No third parties. No compromises.</p>
+        </div>
+        <div class="btn-row">
+          <a href="index.html#contact" class="btn btn-g">Get In Touch</a>
+          <a href="index.html#categories" class="btn btn-o">Our Products</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section class="sec-journey">
+  <div class="w">
+    <div class="jhead rv">
+      <p class="lbl">Our Journey</p>
+      <h2 class="hdg">Three Decades of Growth</h2>
+      <div class="bar"></div>
+      <p>From a single production line to a global eco-packaging brand — a story of persistence, innovation and an unwavering belief that packaging can be better.</p>
+    </div>
+    <div class="jgrid">
+
+      <div class="jblock rv">
+        <div class="jblock-yr">1992</div>
+        <div class="jblock-label">1992</div>
+        <h3>Founded</h3>
+        <p>DivinaECO Pack is established — a bold start built on a single manufacturing unit and an unshakeable belief that quality and responsibility can coexist. This is where the 35-year journey begins: with one factory, one team, and one purpose.</p>
+      </div>
+
+      <div class="jblock rv d1">
+        <div class="jblock-yr">1996</div>
+        <div class="jblock-label">1996</div>
+        <h3>Manufacturing Unit 1 — Plastic Products</h3>
+        <p>Four years in, we commission our first dedicated manufacturing line for plastic products. This unit lays the operational blueprint that would be refined and replicated across every facility that followed — disciplined production, rigorous quality control, zero compromise on output standards.</p>
+      </div>
+
+      <div class="jblock rv">
+        <div class="jblock-yr">2003</div>
+        <div class="jblock-label">2003</div>
+        <h3>Manufacturing Unit 2 — Packaged Drinking Water</h3>
+        <p>Expansion into packaged drinking water marks our first significant diversification. Unit 2 demonstrates our capability to move beyond a single product category and build the infrastructure to serve different sectors — setting the precedent for the multi-unit model we operate today.</p>
+      </div>
+
+      <div class="jblock rv d1">
+        <div class="jblock-yr">2007</div>
+        <div class="jblock-label">2007</div>
+        <h3>National Expansion — Across India</h3>
+        <p>A defining moment: DivinaECO Pack scales its distribution and commercial reach across India. What began as a local operation becomes a nationally recognised brand, building the network relationships, logistics experience and market knowledge that would later power our international growth.</p>
+      </div>
+
+      <div class="jblock rv">
+        <div class="jblock-yr">2016</div>
+        <div class="jblock-label">2016</div>
+        <h3>Paper Cup Unit 3 — The Eco Era Begins</h3>
+        <p>The launch of Unit 3 and our first dedicated paper cup production line is a turning point in the company's identity. We pivot intentionally and permanently toward eco-friendly packaging — investing in plant-based PLA coatings, FSC-certified paperboard and the processes that would define DivinaECO Pack for the next decade.</p>
+      </div>
+
+      <div class="jblock rv d1">
+        <div class="jblock-yr">2018</div>
+        <div class="jblock-label">2018</div>
+        <h3>Global Warehouse — US · UK · Europe · Africa</h3>
+        <p>DivinaECO Pack crosses continents. With warehouse facilities established across the United States, United Kingdom, Europe and Africa, we become a genuinely global supplier — capable of fulfilling orders at scale with local delivery lead times across five continents. The foundation for serving Greece is now firmly laid.</p>
+      </div>
+
+      <div class="jblock rv">
+        <div class="jblock-yr">2021</div>
+        <div class="jblock-label">2021</div>
+        <h3>Corrugation Unit 4 — Expanded Product Range</h3>
+        <p>Unit 4 brings corrugated packaging fully in-house, dramatically expanding our product range. Grill boxes, food-service cartons, outer packaging for retail — all now manufacturable under one roof. This investment cements our position as a full-spectrum eco-packaging supplier rather than a single-product manufacturer.</p>
+      </div>
+
+      <div class="jblock rv d1">
+        <div class="jblock-yr">2024</div>
+        <div class="jblock-label">2024</div>
+        <h3>Grill Boxes Unit 5 — Latest Manufacturing Unit</h3>
+        <p>Our most recent manufacturing unit, Unit 5, is commissioned in 2024 with a dedicated focus on high-performance grill box and food packaging production. State-of-the-art machinery, tighter tolerances, faster output. This is DivinaECO Pack at full maturity — 32 years of accumulated manufacturing intelligence.</p>
+      </div>
+
+      <div class="jblock present rv">
+        <div>
+          <div class="jblock-label">2026</div>
+          <h3>Greece Expansion —<br>DivinaECO Pack IKE · Athens</h3>
+          <p>The launch of DivinaECO Pack IKE in Greece is the next chapter of a 35-year story. Registered in Kifisia, Athens, and backed by five manufacturing units, a global logistics network and two dedicated partners on the ground, we bring internationally proven standards directly to the Greek HORECA sector, food service industry and retail market. Every client we serve here carries the weight of everything that came before.</p>
+        </div>
+        <div class="p-aside">
+          <blockquote>"From a single factory in 1992 to five continents in 2026 — every step was taken with one purpose: to produce packaging that businesses and the planet can both be proud of."</blockquote>
+          <div class="cert-pills">
+            <span class="cpill">5 Manufacturing Units</span>
+            <span class="cpill">Global Warehousing</span>
+            <span class="cpill">FSC Certified</span>
+            <span class="cpill">PLA Biodegradable</span>
+            <span class="cpill">100% Recyclable</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MANUFACTURING -->
+<section class="sec-mfg">
+  <div class="w">
+    <div class="mfg-grid">
+      <div class="mfg-img-wrap rv">
+        <img src="images/factory/factory-5.jpg"
+             onerror="this.src='https://images.unsplash.com/photo-1565793979405-4b82a03c4df6?w=900&fit=crop&q=80'"
+             alt="Production Floor — DivinaECO Pack" />
+        <div class="mfg-caption">
+          <span>In-House Production</span>
+          <strong>Our Manufacturing Floor</strong>
+        </div>
+      </div>
+      <div class="rv d1">
+        <p class="lbl">Production Excellence</p>
+        <h2 class="hdg">Everything<br>Under One Roof</h2>
+        <div class="bar"></div>
+        <p style="font-size:15px;color:var(--mid);line-height:1.82;margin-bottom:8px;">Unlike distributors who resell third-party products, DivinaECO operates its own end-to-end production line. This vertical integration gives us complete authority over quality, lead times and the flexibility to deliver custom orders at a level pure distributors cannot match.</p>
+        <ul class="cap-list">
+          <li><span class="cap-dot"></span><span><strong>Single, Double &amp; Triple Wall Cup Lines</strong> — hot beverages, cold drinks and specialty coffee, all formed in-house.</span></li>
+          <li><span class="cap-dot"></span><span><strong>Offset &amp; Flexo Printing up to 4 Colours</strong> — consistent, precise reproduction of your brand identity on every unit.</span></li>
+          <li><span class="cap-dot"></span><span><strong>Plant-Based PLA Inner Lining</strong> — biodegradable, food-safe coating. No conventional plastics in our range.</span></li>
+          <li><span class="cap-dot"></span><span><strong>Grill Boxes &amp; Food Packaging</strong> — grease-resistant kraft solutions for HORECA and food service operations.</span></li>
+          <li><span class="cap-dot"></span><span><strong>Batch Quality Control</strong> — dimensional accuracy, leak integrity and print fidelity verified before every dispatch.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mfg-tiles rv">
+      <div class="mtile"><div class="mtile-ico">🏭</div><h4>Own Factory</h4><p>Fully-owned production facility. No third-party dependency. Complete supply chain stability.</p></div>
+      <div class="mtile"><div class="mtile-ico">🏅</div><h4>BRC Standards</h4><p>All processes aligned with globally recognised BRC food-safety and quality standards.</p></div>
+      <div class="mtile"><div class="mtile-ico">🍃</div><h4>Eco Materials</h4><p>100% FSC-certified paperboard and PLA-based coatings. No conventional plastics.</p></div>
+      <div class="mtile"><div class="mtile-ico">🌈</div><h4>Custom Branding</h4><p>In-house print ensures your brand looks exactly as designed — at scale, every time.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="sec-values">
+  <div class="w">
+    <div class="values-head rv">
+      <p class="lbl">Our Principles</p>
+      <h2 class="hdg">The Values We Build On</h2>
+      <div class="bar"></div>
+      <p class="sub">Every decision we make — from material sourcing to how we answer emails — is shaped by these six commitments.</p>
+    </div>
+    <div class="vgrid">
+      <div class="vcard rv"><div class="vcard-ico">🌍</div><h3>Environmental Integrity</h3><p>Sustainability is an operational commitment, not a marketing claim. We make decisions based on long-term ecological responsibility at every stage of our process.</p></div>
+      <div class="vcard rv d1"><div class="vcard-ico">🏅</div><h3>Uncompromising Quality</h3><p>Premium packaging must perform — every single time. Our internal protocols and BRC-aligned standards ensure every product meets the same exacting specification.</p></div>
+      <div class="vcard rv d2"><div class="vcard-ico">🤝</div><h3>Relationships First</h3><p>Great partnerships are built on trust and transparency. Our clients receive dedicated attention and a partner genuinely invested in their long-term success.</p></div>
+      <div class="vcard rv"><div class="vcard-ico">⚙️</div><h3>Operational Reliability</h3><p>We honour lead time commitments and back every order with responsive logistics — because our clients' businesses depend on our consistency.</p></div>
+      <div class="vcard rv d1"><div class="vcard-ico">🎨</div><h3>Creativity &amp; Customisation</h3><p>Packaging is a brand's first physical touchpoint with its customer. Our custom print capabilities help brands communicate their identity clearly on every cup.</p></div>
+      <div class="vcard rv d2"><div class="vcard-ico">🌐</div><h3>Global Scale, Local Care</h3><p>We combine the expertise of a global manufacturer with the attentiveness of a local partner. Every Greece enquiry receives a prompt, personal response — always.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="sec-partners">
+  <div class="w">
+    <div class="phead rv">
+      <p class="lbl">Our Leadership</p>
+      <h2 class="hdg">Meet Our Partners</h2>
+      <div class="bar"></div>
+      <p>DivinaECO Pack Greece is led by two partners who bring complementary strengths — manufacturing depth and local market knowledge — united by a shared vision.</p>
+    </div>
+    <div class="pgrid">
+
+      <!-- Manik Wani -->
+      <div class="pcard rv">
+        <div class="ptopbar"></div>
+        <div class="pcard-head">
+          <div class="pmon"><span>MW</span></div>
+          <div>
+            <div class="pname">Manik Wani</div>
+            <div class="prole">Partner &amp; Managing Director</div>
+            <div class="ptag">Manufacturing · Global Strategy</div>
+          </div>
+        </div>
+        <div class="psep"></div>
+        <div class="pcard-body">
+          <p>Manik Wani is the driving force behind DivinaECO Pack's manufacturing operations and global strategy. With deep expertise in paper-based packaging production built over years in the industry, Manik oversees the entire production ecosystem — from raw material procurement and machinery investment to quality standards and international market development.</p>
+          <p>His intimate knowledge of manufacturing gives DivinaECO an edge that pure distributors cannot replicate: the ability to customise, problem-solve and deliver at scale, with complete control over every stage of production.</p>
+          <div class="pquote">"We don't just make packaging — we build the infrastructure for businesses to thrive sustainably. Every cup we ship carries our promise of quality and responsibility."</div>
+          <div class="plinks">
+            <a href="mailto:manikw@divinaeco.gr" class="plink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+            <a href="https://wa.me/919307139899" target="_blank" class="plink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Michael Tsoukalas -->
+      <div class="pcard rv d1">
+        <div class="ptopbar"></div>
+        <div class="pcard-head">
+          <div class="pmon" style="background:linear-gradient(135deg,#1e1600 0%,#2e2008 100%);border-color:rgba(201,168,76,.5);">
+            <span>MS</span>
+          </div>
+          <div>
+            <div class="pname">Michael Tsoukalas</div>
+            <div class="prole">Partner &amp; Greece Director</div>
+            <div class="ptag">Market Development · Greece</div>
+          </div>
+        </div>
+        <div class="psep"></div>
+        <div class="pcard-body">
+          <p>Michael Tsoukalas is DivinaECO Pack's anchor in Greece, responsible for establishing and growing the company's local presence. His deep knowledge of the Greek HORECA sector, food service industry and business landscape is the foundation on which DivinaECO Pack IKE has been built.</p>
+          <p>As the primary point of contact for Greek clients, Michael ensures every partnership begins with genuine understanding — of a business's operational needs, brand identity and sustainability goals — and that every order is fulfilled with the care that builds long-term loyalty.</p>
+          <div class="pquote">"Greece deserves packaging that matches the quality of its food and hospitality culture. Our role is to bring the best sustainable solutions to every table in this country."</div>
+          <div class="plinks">
+            <a href="mailto:mtsoukalas@divinaeco.gr" class="plink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+            <a href="tel:+306936790308" class="plink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.34a2 2 0 0 1 1.99-2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.94-.94a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERT BAND -->
+<div class="cert-band">
+  <div class="cinner">
+    <div><h3>Certified, Compliant &amp; Accountable</h3><p>Our products and processes meet internationally recognised standards.</p></div>
+    <div class="cbadges">
+      <div class="cbadge"><span class="dot"></span>BRC Aligned Standards</div>
+      <div class="cbadge"><span class="dot"></span>FSC Certified Paperboard</div>
+      <div class="cbadge"><span class="dot"></span>PLA Biodegradable Lining</div>
+      <div class="cbadge"><span class="dot"></span>100% Recyclable Range</div>
+      <div class="cbadge"><span class="dot"></span>Food-Safe Contact Certified</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="sec-cta">
+  <div class="w">
+    <div class="cta-box rv">
+      <p class="lbl">Work With Us</p>
+      <h2 class="hdg">Ready to Elevate<br>Your Packaging?</h2>
+      <div class="bar"></div>
+      <p>Whether you need stock products for immediate delivery or a fully customised branded range, our team responds within 24 hours — always personally.</p>
+      <div class="cta-btns">
+        <a href="index.html#contact" class="btn btn-gld">Request a Quote</a>
+        <a href="index.html#categories" class="btn btn-ow">View Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fgrid">
+    <div class="fbrand">
+      <span class="lt">DivinaECO Pack</span>
+      <span class="ls">Eco Packaging · Greece</span>
+      <p>Premium eco-friendly packaging for restaurants, cafes, hotels and HORECA chains. Produced with respect for the environment and dedication to quality.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/Divinaeco" class="slink" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://www.instagram.com/divinaeco_pack/" class="slink" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://www.linkedin.com/company/divinaecopack/posts/?feedView=all" class="slink" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="products/single-wall-cups.html">Single Wall Cups</a></li>
+        <li><a href="products/double-wall-cups.html">Double Wall Cups</a></li>
+        <li><a href="products/triple-wall-cups.html">Ripple Wall Cups</a></li>
+        <li><a href="products/grill-box.html">Grill Boxes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="news/environment.html">Sustainability</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p style="color:#444;font-size:13px;margin-bottom:7px;">&#9990; <a href="tel:+306936790308" style="color:#555;">+30 693 679 0308</a></p>
+      <p style="color:#444;font-size:13px;margin-bottom:7px;">WA: <a href="https://wa.me/919307139899" style="color:#555;" target="_blank">+91 9307139899</a></p>
+      <p style="color:#555;font-size:11px;margin-bottom:3px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Email</p>
+      <p style="margin-bottom:2px;"><a href="mailto:info@divinaeco.gr" style="color:#444;font-size:12px;">info@divinaeco.gr</a></p>
+      <p style="margin-bottom:2px;"><a href="mailto:mtsoukalas@divinaeco.gr" style="color:#444;font-size:12px;">mtsoukalas@divinaeco.gr</a></p>
+      <p style="margin-bottom:10px;"><a href="mailto:manikw@divinaeco.gr" style="color:#444;font-size:12px;">manikw@divinaeco.gr</a></p>
+      <p style="color:#444;font-size:12px;line-height:1.6;">265 Kifisias Ave,<br>14561 Kifisia, Athens</p>
+    </div>
+  </div>
+  <div class="fbtm">
+    <p>© 2026 DivinaECO Pack IKE. ALL RIGHTS RESERVED. | <a href="terms-of-use.html">Terms of Use</a> | <a href="#">Cookie Policy</a></p>
+    <span class="btop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to Top</span>
+  </div>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1a1a1a;border-top:2px solid #3a7d44;padding:18px 24px;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;box-shadow:0 -4px 24px rgba(0,0,0,.3);">
+  <p style="color:#bbb;font-size:13px;max-width:680px;line-height:1.6;margin:0;">🍪 We use cookies to improve your experience. <a href="privacy-policy.html" style="color:#5aaf6a;margin-left:4px;">Learn more</a></p>
+  <div style="display:flex;gap:10px;flex-shrink:0;">
+    <button onclick="rejectCookies()" style="padding:8px 18px;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;border:2px solid #444;background:transparent;color:#888;border-radius:2px;cursor:pointer;">Reject</button>
+    <button onclick="acceptCookies()" style="padding:8px 18px;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;background:#3a7d44;border:2px solid #3a7d44;color:#fff;border-radius:2px;cursor:pointer;">Accept</button>
+  </div>
+</div>
+
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'el,en',autoDisplay:false},'google_translate_element');}</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+  // Cookie
+  (function(){ if(!localStorage.getItem('cookie_consent')) document.getElementById('cookieBanner').style.display='flex'; })();
+  function acceptCookies(){ localStorage.setItem('cookie_consent','accepted'); document.getElementById('cookieBanner').style.display='none'; }
+  function rejectCookies(){ localStorage.setItem('cookie_consent','rejected'); document.getElementById('cookieBanner').style.display='none'; }
+  // Language
+  function switchLang(lang){ var a=0; function t(){ var s=document.querySelector('.goog-te-combo'); if(s){ s.value=lang; s.dispatchEvent(new Event('change')); document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.toggle('lang-active',b.getAttribute('data-lang')===lang); }); localStorage.setItem('preferred_lang',lang); } else if(a<20){ a++; setTimeout(t,200); } } t(); }
+  window.addEventListener('load',function(){ var p=localStorage.getItem('preferred_lang'); if(p&&p!=='en') setTimeout(function(){ switchLang(p); },800); });
+  // Scroll reveal
+  var obs=new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } }); },{ threshold:0.1 });
+  document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
+</script>
+</body>
+</html>
